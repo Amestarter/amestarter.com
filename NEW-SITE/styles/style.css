@@ -755,11 +755,11 @@ body {
     position: absolute;
     cursor: pointer;
     right: 5%;
-    top: 5%;
+    top: 8%;
     height: 50px;
     aspect-ratio: 1/1;
-    -webkit-transform: translate(-20%, -50%);
-            transform: translate(-20%, -50%);
+    -webkit-transform: translate(-20%, -70%);
+            transform: translate(-20%, -70%);
     z-index: 2;
     -webkit-transition: all 0.7s ease;
     transition: all 0.7s ease;

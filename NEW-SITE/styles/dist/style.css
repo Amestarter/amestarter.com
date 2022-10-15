@@ -606,10 +606,10 @@ body {
     position: absolute;
     cursor: pointer;
     right: 5%;
-    top: 5%;
+    top: 8%;
     height: 50px;
     aspect-ratio: 1/1;
-    transform: translate(-20%, -50%);
+    transform: translate(-20%, -70%);
     z-index: 2;
     transition: all 0.7s ease;
   }
