@@ -4,6 +4,18 @@ body {
   background-color: #252954;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(103.91deg, #9B51E0 21.01%, rgba(48, 129, 237, 0.8) 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   font-family: "Oxygen", sans-serif !important;
 }
@@ -73,8 +85,10 @@ h1 {
   flex-direction: column;
 }
 .landingpage .footer {
-  margin: 50px 0;
+  margin: 500px 0;
+  height: 60vh;
   display: flex;
+  border: 1px solid red;
   align-items: center;
   justify-content: space-between;
 }
@@ -446,12 +460,13 @@ h1 {
 @media screen and (max-width: 650px) {
   .footer-navigate .nav {
     margin: 0;
+    display: flex;
+    height: 300px;
   }
 
   .footer-navigate {
-    display: flex;
     padding: 0;
-    flex-wrap: wrap;
+    height: auto;
   }
 }
 .footer2 p {
@@ -1500,6 +1515,28 @@ footer .container h2 {
   width: 100vw;
   left: -5px;
   overflow: hidden;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+.footer-navigate {
+  border: 3px solid yellow;
+  height: 50vh;
+  justify-content: space-around;
+  padding: 10vh 0;
+}
+
+.nav {
+  border: 4px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10%;
+  width: 27%;
 }
 
 /* html {

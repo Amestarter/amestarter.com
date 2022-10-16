@@ -4,6 +4,18 @@ body {
   background-color: #252954;
 }
 
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(103.91deg, #9B51E0 21.01%, rgba(48, 129, 237, 0.8) 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 * {
   font-family: "Oxygen", sans-serif !important;
 }
@@ -92,10 +104,12 @@ h1 {
           flex-direction: column;
 }
 .landingpage .footer {
-  margin: 50px 0;
+  margin: 500px 0;
+  height: 60vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border: 1px solid red;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -562,14 +576,14 @@ h1 {
 @media screen and (max-width: 650px) {
   .footer-navigate .nav {
     margin: 0;
-  }
-  .footer-navigate {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    height: 300px;
+  }
+  .footer-navigate {
     padding: 0;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    height: auto;
   }
 }
 .footer2 p {
@@ -1766,6 +1780,38 @@ footer .container h2 {
   width: 100vw;
   left: -5px;
   overflow: hidden;
+}
+
+.stop-scrolling {
+  height: 100%;
+  overflow: hidden;
+}
+
+.footer-navigate {
+  border: 3px solid yellow;
+  height: 50vh;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 10vh 0;
+}
+
+.nav {
+  border: 4px solid red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 10%;
+  width: 27%;
 }
 
 /* html {
