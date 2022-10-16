@@ -112,3 +112,84 @@ hamburger.addEventListener('click', ()=>{
     //Hamburger Animation
     hamburger.classList.toggle("toggle");
 });
+
+
+
+
+var items = document.querySelectorAll("li");
+
+function isItemInView(item){
+  var rect = item.getBoundingClientRect();
+  return (
+      rect.top >= 0 &&
+      rect.left >= 0 &&
+      rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+      rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+    );
+}
+
+function callbackFunc() {
+    for (var i = 0; i < items.length; i++) {
+      if (isItemInView(items[i])) {
+        items[i].classList.add("show");
+      }
+    }
+  }
+
+  // listen for events
+  window.addEventListener("load", callbackFunc);
+  window.addEventListener("resize", callbackFunc);
+  window.addEventListener("scroll", callbackFunc);
+
+
+  const progressBar = document.getElementById("progressbar");
+progressBar.style.height = 1 + "%";
+
+window.onscroll = () => {
+	const scroll = document.documentElement.scrollTop;
+	const height =
+		document.documentElement.scrollHeight - document.documentElement.clientHeight;
+	let scrolled = (scroll / height) * 100;
+
+	if (scrolled <= 1) {
+		progressBar.style.height = 1 + "%";
+	} else if (scrolled >= 2 && scrolled <= 99.9) {
+		progressBar.style.height = scrolled + "%";
+		progressBar.classList.remove("glow");
+	} else if (scrolled === 100) {
+		progressBar.style.height = scrolled + "%";
+		// 		Do something when reached 100% scroll
+		progressBar.classList.add("glow");
+	}
+};
+
+
+let toggles = document.getElementsByClassName('toggle');
+let contentDiv = document.getElementsByClassName('content');
+let icons = document.getElementsByClassName('icon');
+
+for(let i=0; i<toggles.length; i++){
+    toggles[i].addEventListener('click', ()=>{
+        if( parseInt(contentDiv[i].style.height) != contentDiv[i].scrollHeight){
+            contentDiv[i].style.height = contentDiv[i].scrollHeight + "px";
+            toggles[i].style.color = "#ce8a0d";
+            icons[i].classList.remove('fa-plus');
+            icons[i].classList.add('fa-minus');
+        }
+        else{
+            contentDiv[i].style.height = "0px";
+            toggles[i].style.color = "#111130";
+            icons[i].classList.remove('fa-minus');
+            icons[i].classList.add('fa-plus');
+        }
+
+        for(let j=0; j<contentDiv.length; j++){
+            if(j!==i){
+                contentDiv[j].style.height = "0px";
+                toggles[j].style.color = "#111130";
+                icons[j].classList.remove('fa-minus');
+                icons[j].classList.add('fa-plus');
+            }
+        }
+    });
+}

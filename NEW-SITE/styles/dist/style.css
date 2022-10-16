@@ -590,7 +590,7 @@ body {
 
   .navbar {
     position: fixed;
-    z-index: 3;
+    z-index: 10;
     height: 100vh;
     width: 100%;
   }
@@ -610,13 +610,13 @@ body {
     height: 50px;
     aspect-ratio: 1/1;
     transform: translate(-20%, -70%);
-    z-index: 2;
+    z-index: 9;
     transition: all 0.7s ease;
   }
 
   .line1, .line2, .line3 {
     height: 4px;
-    width: 80%;
+    width: 40px;
     background: white;
   }
 
@@ -680,7 +680,7 @@ body {
 
   /*Animating Hamburger Icon on Click*/
   .toggle .line1 {
-    transform: rotate(-45deg) translate(-5px, 6px);
+    transform: rotate(-45deg) translate(-5px, 20px);
   }
 
   .toggle .line2 {
@@ -689,7 +689,7 @@ body {
   }
 
   .toggle .line3 {
-    transform: rotate(45deg) translate(-5px, -6px);
+    transform: rotate(45deg) translate(-5px, -20px);
   }
 }
 @media screen and (max-width: 700px) {
@@ -1073,5 +1073,336 @@ body {
 
   .caption-container h1 {
     font-size: 34px;
+  }
+}
+ul {
+  padding: 50px 0;
+}
+
+ul li {
+  position: relative;
+  list-style-type: none;
+  width: 6px;
+  background-color: white;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+ul li::after {
+  background: white;
+  content: "";
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+}
+
+ul li div {
+  position: relative;
+  width: 400px;
+  padding: 15px;
+  border-radius: 5px;
+  bottom: 0;
+  background: rgba(42, 50, 113, 0.28);
+}
+
+ul li:nth-child(odd) div {
+  left: 45px;
+}
+
+ul li:nth-child(even) div {
+  left: -445px;
+}
+
+time {
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 10px;
+}
+
+ul li div {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+ul li:nth-child(odd) div {
+  transform: translate3d(200px, 0, 0);
+}
+
+ul li:nth-child(even) div {
+  transform: translate3d(-200px, 0, 0);
+}
+
+ul li.show div {
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+}
+
+@media screen and (max-width: 900px) {
+  ul li {
+    margin: 0 20px;
+  }
+
+  ul li div {
+    width: 250px;
+  }
+
+  ul li:nth-child(even) div {
+    left: 45px;
+  }
+
+  /*   ul li:nth-child(even) div {
+      left: -289px; */
+  /*250+45-6*/
+}
+* {
+  overflow: visible;
+}
+
+.progress-container {
+  position: fixed;
+  right: 10px;
+  width: 4000px;
+  height: 90%;
+  background: #222;
+  border-radius: 2px;
+  margin: auto;
+}
+
+.progress-bar {
+  width: 8px;
+  background: #d4b255;
+  border-radius: 2px;
+}
+
+.progress-bar:before {
+  height: 1%;
+}
+
+.glow {
+  -webkit-box-shadow: 0px 0px 14px 21px rgba(212, 178, 85, 0.48);
+  -moz-box-shadow: 0px 0px 14px 21px rgba(212, 178, 85, 0.48);
+  box-shadow: 0px 0px 14px 21px rgba(212, 178, 85, 0.48);
+}
+
+.faq-header {
+  font-size: 42px;
+  border-bottom: 1px dotted #ccc;
+  padding: 24px;
+}
+
+.faq-content {
+  margin: 50px auto;
+}
+
+.faq-question {
+  padding: 20px 0;
+  border: 1px dotted #ccc;
+  border-radius: 10px;
+  width: 95%;
+  margin: auto;
+  margin-top: 1em;
+}
+
+.panel-title {
+  font-size: 1.5rem;
+  width: 90%;
+  position: relative;
+  margin: 0;
+  padding: 10px 10px 0 48px;
+  display: block;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 700px) {
+  .panel-title {
+    width: 80%;
+  }
+}
+.panel-content {
+  font-size: 1.2rem;
+  padding: 0px 14px;
+  margin: 0 40px;
+  height: 0;
+  overflow: hidden;
+  z-index: -1;
+  position: relative;
+  opacity: 0;
+  -webkit-transition: 0.4s ease;
+  -moz-transition: 0.4s ease;
+  -o-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.panel:checked ~ .panel-content {
+  height: auto;
+  opacity: 1;
+  padding: 14px;
+}
+
+.plus {
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 4px;
+  z-index: 5;
+  font-size: 42px;
+  line-height: 100%;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  transition: 0.2s ease;
+}
+
+.panel:checked ~ .plus {
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.panel {
+  display: none;
+}
+
+.grid {
+  padding-top: 15%;
+}
+
+@media (min-width: 720px) {
+  .grid {
+    padding-top: 10%;
+  }
+}
+.container {
+  margin-left: 15vw;
+  margin-right: 15vw;
+  margin-top: 5vh;
+}
+
+.wrapper {
+  margin-bottom: 10px;
+  padding: 7px 20px;
+  border-radius: 5px;
+  border: 0.5px solid rebeccapurple;
+}
+
+.img {
+  display: none;
+}
+
+.toggle,
+.content {
+  font-family: "Poppins", sans-serif;
+  color: antiquewhite;
+}
+
+.toggle {
+  width: 100%;
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 16px;
+  color: #020211;
+  font-weight: 500;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.content {
+  font-size: 14px;
+  text-align: justify;
+  line-height: 1.7;
+  height: 0;
+  color: black;
+  overflow: hidden;
+  transition: all 1s;
+  backdrop-filter: blur(5px);
+}
+
+a {
+  text-decoration: none;
+  align-items: center;
+  align-content: center;
+}
+
+h2 {
+  margin: 2vh auto;
+  color: black;
+  text-align: center;
+  width: 50%;
+  letter-spacing: 1px;
+  padding: 5px 0px;
+}
+
+.doc {
+  margin: 20px auto;
+  display: table;
+}
+
+.docs {
+  padding: 10px 30px;
+  border-radius: 5px;
+  background-color: black;
+  text-align: center;
+  color: #dde5ec !important;
+  font-size: 20px;
+  transition: color 500ms ease-in-out;
+}
+
+.docs:hover {
+  color: blue;
+}
+
+footer .container h2 {
+  width: fit-content;
+  color: white;
+  margin: 5% auto;
+}
+
+@media only screen and (max-width: 410px) {
+  .toggle {
+    font-size: 12px;
+  }
+
+  .content {
+    font-size: 11px;
+    text-align: justify;
+    line-height: 20px;
+    height: 0;
+    overflow: hidden;
+    transition: all 1s;
+  }
+}
+@media only screen and (min-width: 770px) {
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 2.2fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+    grid-row-gap: 20px;
+    justify-items: flex-start;
+    align-items: center;
+  }
+
+  .image {
+    background-color: transparent;
+    background-image: url(./faq.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 100%;
   }
 }
