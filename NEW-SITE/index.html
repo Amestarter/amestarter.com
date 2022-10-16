@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Ceviche+One&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
 <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -16,17 +17,33 @@
 </head>
 <body>
     <div class="landingpage">
-      <input type="checkbox" id="active" class="checkme">
-    <label for="active" class="menu-btn"><i class="fas fa-bars"></i></label>
-    <div class="wrapperhead">
-      <ul>
-<li><a href="#">Home</a></li>
-<li><a href="#">About</a></li>
-<li><a href="#">Services</a></li>
-<li><a href="#">Gallery</a></li>
-<li><a href="#">Feedback</a></li>
-</ul>
-</div>
+      <div class="container-nav">
+        <button id="burger" class="open-main-nav nav-toggle">
+           <span class="burger"></span>
+           <span class="burger-text">Menu</span>
+        </button>
+        <nav class="main-nav" id="main-nav">
+           <ol>
+              <li class="nav-lists">
+                 <a href="#">About me</a>
+              </li>
+              <li class="nav-lists">
+                 <a href="#">Speaker &amp; Writer</a>
+              </li>
+              <li class="nav-lists">
+                 <a href="#">Work</a>
+              </li>
+              <li class="nav-lists">
+                 <a href="#">Contact</a>
+              </li>
+              <li class="nav-lists">
+                 <a href="#">Blog</a>
+              </li>
+           </ol>
+        </nav>
+        
+     </div>
+     
         <div class="navbar">
           <a class="navlogo">AMESTARTER</a>
           <button class="hamburger">
@@ -467,7 +484,7 @@
           <div class="footer-navigate">
             <div class="nav">
               <h5>Marketplace</h5>
-              <p>Home</p>
+              <p>Lorem ipsum dolor sit amet.</p>
               <p>Activity</p>
               <p>Discover</p>
               <p>Learn more</p>
@@ -494,5 +511,6 @@
       </div>
       <script src="script.js"></script>
       <script src="roadmap.js"></script>
+      <script src="menu.js"></script>
 </body>
 </html>

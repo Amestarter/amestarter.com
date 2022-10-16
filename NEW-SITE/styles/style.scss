@@ -16,6 +16,11 @@ body {
     text-align: center;
     font-size: 4rem;
   }
+  @media screen and (max-width:800px){
+    h1{
+      font-size: 2.2rem;
+    }
+  }
   
   .landingpage {
     margin: 0 auto;
@@ -81,111 +86,6 @@ body {
     }
   }
   
-  .wrapperhead{
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
-    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
-   /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%);*/
-    /* clip-path: circle(25px at calc(0% + 45px) 45px); */
-    background: #000;
-    clip-path: circle(25px at calc(100% - 45px) 45px);
-    transition: all 0.3s ease-in-out;
-  }
-  #active:checked ~ .wrapperhead{
-    clip-path: circle(75%);
-  }
-  .checkme,.wrapperhead{
-    display:none;
-  }
-  .menu-btn{
-    position: absolute;
-    z-index: 2;
-    right: 20px;
-    /* left: 20px; */
-    top: 20px;
-    height: 50px;
-    width: 50px;
-    text-align: center;
-    line-height: 50px;
-    border-radius: 50%;
-    font-size: 20px;
-    color: #fff;
-    cursor: pointer;
-    /*background: linear-gradient(-135deg, #c850c0, #4158d0);*/
-    /* background: linear-gradient(375deg, #1cc7d0, #2ede98); */
-   /* background: linear-gradient(-45deg, #e3eefe 0%, #efddfb 100%); */
-    background: #000;
-    transition: all 0.3s ease-in-out;
-  }
-  #active:checked ~ .menu-btn{
-    color: #fff;
-  }
-  #active:checked ~ .menu-btn i:before{
-    content: "\f00d";
-  }
-  .wrapperhead ul{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    list-style: none;
-    text-align: center;
-  }
-  .wrapperhead ul li{
-    margin: 15px 0;
-  }
-  .wrapperhead ul li a{
-    color: none;
-    text-decoration: none;
-    font-size: 30px;
-    font-weight: 500;
-    padding: 5px 30px;
-    color: #fff;
-    border-radius: 50px;
-    background: #000;
-    position: relative;
-    line-height: 50px;
-    transition: all 0.3s ease;
-  }
-  .wrapperhead ul li a:after{
-    position: absolute;
-    content: "";
-    background: #fff;
-     background: linear-gradient(#14ffe9, #ffeb3b, #ff00e0);
-    /*background: linear-gradient(375deg, #1cc7d0, #2ede98);*/
-    width: 104%;
-    height: 110%;
-    left: -2%;
-    top: -5%; /* if the font is 'Oswald'*/
-    border-radius: 50px;
-    transform: scaleY(0);
-    z-index: -1;
-    animation: rotate 1.5s linear infinite;
-    transition: transform 0.3s ease;
-  }
-  .wrapperhead ul li a:hover:after{
-    transform: scaleY(1);
-  }
-  .wrapperhead ul li a:hover{
-    color: #fff;
-  }
-  input[type="checkbox"]{
-    display: none;
-  }
-  .content{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    text-align: center;
-    width: 100%;
-    color: #202020;
-  }
   .navbar {
     .hamburgerlogowrap {
       display: flex;
@@ -715,14 +615,17 @@ body {
         filter: blur(120px);
       }
     }
-    .checkme,.wrapperhead{
-      display:block;
-      z-index: 20;
-    }
     
     .discover-items {
       grid-template-columns: auto auto;
       justify-content: space-around;
+    }
+    .footer-navigate{
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width:100%;
+      gap:2rem;
     }
   }
   @media screen and (max-width: 825px){
@@ -1289,127 +1192,404 @@ body {
                 // }  8{
                  
         
-                             
-                .grid {
-                  padding-top: 15%;
-                }
-                
-                @media (min-width: 720px) {
-                  .grid {
-                    padding-top: 10%;
+                  * {
+                    padding: 0;
+                    margin: 0;
                   }
-                }
-                .container {
-                  margin-left: 15vw;
-                  margin-right: 15vw;
-                  margin-top: 5vh;
-                }
-                .wrapper {
-                  margin-bottom: 10px;
-                  padding: 7px 20px;
-                  border-radius: 5px;
-                  border: 0.5px solid rebeccapurple;
-                }
-                .img {
-                  display: none;
-                }
                 
-                .toggle,
-                .content {
-                  font-family: "Poppins", sans-serif;
-                  color: antiquewhite;
-                }
-                .toggle {
-                  width: 100%;
-                  background-color: transparent;
-                  display: flex;
-                  align-items: center;
-                  justify-content: space-between;
-                  font-size: 16px;
-                  color: #020211;
-                  font-weight: 500;
-                  border: none;
-                  outline: none;
-                  cursor: pointer;
-                  padding: 5px 0;
-                }
-                .content {
-                  font-size: 14px;
-                  text-align: justify;
-                  line-height: 1.7;
-                  height: 0;
-                  color: black;
-                  overflow: hidden;
-                  transition: all 1s;
-                  backdrop-filter: blur(5px);
-                }
-                a {
-                  text-decoration: none;
-                  align-items: center;
-                  align-content: center;
-                }
-                
-                h2 {
-                  margin: 2vh auto;
-                  color: black;
-                  text-align: center;
-                  width: 50%;
-                  letter-spacing: 1px;
-                  padding: 5px 0px;
-   }
-                .doc {
-                  margin: 20px auto;
-                  display: table;
-                }
-                .docs {
-                  padding: 10px 30px;
-                  border-radius: 5px;
-                  background-color: black;
-                  text-align: center;
-                  color: #dde5ec !important;
-                  font-size: 20px;
-                  transition: color 500ms ease-in-out;
-                }
-                
-                .docs:hover {
-                  color: blue;
-                }
-                
-                footer .container h2 {
-                  width: fit-content;
-                  color: white;
-                  margin: 5% auto;
-                }
-                
-                @media only screen and (max-width: 410px) {
+                  .grid {
+                    padding-top: 15%;
+                  }
+                  
+                  @media (min-width: 720px) {
+                    .grid {
+                      padding-top: 10%;
+                    }
+                  }
+                  .container {
+                    margin-left: 15vw;
+                    margin-right: 15vw;
+                    margin-top: 5vh;
+                  }
+                  .wrapper {
+                    margin-bottom: 10px;
+                    padding: 7px 20px;
+                    border-radius: 5px;
+                    border: 0.5px solid rebeccapurple;
+                  }
+                  .img {
+                    display: none;
+                  }
+                  
+                  .toggle,
+                  .content {
+                    font-family: "Poppins", sans-serif;
+                    color: antiquewhite;
+                  }
                   .toggle {
-                    font-size: 12px;
+                    width: 100%;
+                    background-color: transparent;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    font-size: 16px;
+                    color: #020211;
+                    font-weight: 500;
+                    border: none;
+                    outline: none;
+                    cursor: pointer;
+                    padding: 5px 0;
                   }
                   .content {
-                    font-size: 11px;
+                    font-size: 14px;
                     text-align: justify;
-                    line-height: 20px;
+                    line-height: 1.7;
                     height: 0;
+                    color: black;
                     overflow: hidden;
                     transition: all 1s;
+                    backdrop-filter: blur(5px);
                   }
-                }
-                @media only screen and (min-width: 770px) {
-                  .grid {
-                    display: grid;
-                    grid-template-columns: 1fr 2.2fr;
-                    grid-template-rows: 1fr;
-                    grid-column-gap: 20px;
-                    grid-row-gap: 20px;
-                    justify-items: flex-start;
+                  a {
+                    text-decoration: none;
                     align-items: center;
+                    align-content: center;
                   }
-                  .image {
-                    background-color: transparent;
-                    background-image: url(./faq.svg);
-                    background-repeat: no-repeat;
-                    background-size: contain;
-                    padding: 100%;
+                  
+                  h2 {
+                    margin: 2vh auto;
+                    color: black;
+                    text-align: center;
+                    width: 50%;
+                    letter-spacing: 1px;
+                    padding: 5px 0px;
                   }
-                }
-                
+                  .doc {
+                    margin: 20px auto;
+                    display: table;
+                  }
+                  .docs {
+                    padding: 10px 30px;
+                    border-radius: 5px;
+                    background-color: black;
+                    text-align: center;
+                    color: #dde5ec !important;
+                    font-size: 20px;
+                    transition: color 500ms ease-in-out;
+                  }
+                  
+                  .docs:hover {
+                    color: blue;
+                  }
+                  
+                  footer .container h2 {
+                    width: fit-content;
+                    color: white;
+                    margin: 5% auto;
+                  }
+                  
+                  @media only screen and (max-width: 410px) {
+                    .toggle {
+                      font-size: 12px;
+                    }
+                    .content {
+                      font-size: 11px;
+                      text-align: justify;
+                      line-height: 20px;
+                      height: 0;
+                      overflow: hidden;
+                      transition: all 1s;
+                    }
+                  }
+                  @media only screen and (min-width: 770px) {
+                    .grid {
+                      display: grid;
+                      grid-template-columns: 1fr 2.2fr;
+                      grid-template-rows: 1fr;
+                      grid-column-gap: 20px;
+                      grid-row-gap: 20px;
+                      justify-items: flex-start;
+                      align-items: center;
+                    }
+                    .image {
+                      background-color: transparent;
+                      background-image: url(./faq.svg);
+                      background-repeat: no-repeat;
+                      background-size: contain;
+                      padding: 100%;
+                    }
+                  }
+                                         
+/* Main menu positionning */
+/* Main menu positionning */
+.main-nav {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+  background: #0213294d;
+  backdrop-filter: blur(10px);
+  -webkit-text-stroke: 1px pink;
+  opacity: 0;
+  font-size: 1.4rem ;
+  z-index: -1;
+  touch-action: none;
+  visibility: hidden;
+  transition: all .375s;
+}
+
+
+.main-nav.is-open {
+  opacity: 1;
+  z-index: 100;
+  touch-action: none;
+  visibility: visible;
+}
+
+/* Yellow band effect */
+.main-nav::before {
+ content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: -15px;
+  background: #a004a59c;
+  -webkit-background-clip: text;
+  transform-origin: 0 0;
+  transform: skew(-14deg) translateX(-120%);
+  transition: all .275s .1s;
+}
+
+.main-nav.is-open::before {
+  transform: skew(-14deg) translateX(0);
+}
+
+/* Skewing effect on menu links */
+.main-nav ol {
+  display: inline-flex;
+  flex-direction: column;
+  height: 93%; /* Should be 100%, but we have a notice message :D */
+  align-items: flex-end;
+  justify-content: center;
+  transform: translateX(-18%) skew(-16deg);
+}
+
+.main-nav .nav-lists {
+  display: block;
+  margin: .5rem 0;
+  text-align: right;
+  transform: skew(16deg);
+}
+
+/* Apparition effect on links */
+.main-nav a {
+  opacity: 0;
+  transform: translateY(-10px);
+}
+
+.main-nav.is-open a {
+  opacity: 1;
+  transform: translateY(0);
+}
+.main-nav .nav-lists:nth-child(1) a {
+transition: all 275ms 175ms
+}
+.main-nav .nav-lists:nth-child(2) a {
+transition: all 275ms 225ms
+}
+.main-nav .nav-lists:nth-child(3) a {
+transition: all 275ms 275ms
+}
+.main-nav .nav-lists:nth-child(4) a {
+transition: all 275ms 325ms
+}
+.main-nav .nav-lists:nth-child(5) a {
+transition: all 275ms 375ms
+}
+
+
+/* Decoration */
+.main-nav ol,
+.main-nav .nav-lists {
+list-style: none;
+padding: 0;
+}
+.main-nav a {
+display: block;
+padding: 12px 0;
+color: #5A3B5D;
+font-size: 1.4em;
+text-decoration: none;
+font-weight: bold;
+}
+
+/* Burger Style: @see: https://codepen.io/CreativeJuiz/full/oMZNXy */
+.open-main-nav {
+position: absolute;
+top: 15px;
+padding-top: 20px;
+right: 15px;
+z-index: 1000;
+background: none;
+border: 0;
+cursor: pointer;
+}
+.open-main-nav:focus {
+outline: none;
+}
+.burger {
+position: relative;
+display: block;
+width: 28px;
+height: 4px;
+margin: 0 auto;
+background: #5A3B5D;
+transform: skew(5deg);
+transition: all .275s;
+}
+
+.burger:after,
+.burger:before {
+content: '';
+display: block;
+height: 100%;
+background: #5A3B5D;
+transition: all .275s;
+}
+
+.burger:after {
+transform: translateY(-12px) translateX(-2px) skew(-20deg);
+}
+
+.burger:before {
+transform: translateY(-16px) skew(-10deg);
+}
+
+/* Toggle State part */
+.is-open .burger {
+transform: skew(5deg) translateY(-8px) rotate(-45deg);
+}
+
+.is-open .burger:before {
+transform: translateY(0px) skew(-10deg) rotate(75deg);
+}
+
+.is-open .burger:after {
+transform: translateY(-12px) translateX(10px) skew(-20deg);
+  opacity: 0;
+}
+
+/* MENU Text part */
+
+.burger-text {
+display: block;
+font-size: .675rem;
+letter-spacing: .05em;
+margin-top: .5em;
+text-transform: uppercase;
+font-weight: 500;
+text-align: center;
+color: #5A3B5D;
+}
+.container-nav {
+position: absolute;
+height:100vh;
+width:100vw;
+left:-5px;
+overflow: hidden;
+// background: linear-gradient(to bottom, #eee, #ddd);
+}
+
+/* html {
+height: 100%;
+}
+body {
+height: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+} */
+
+/* Slow motion button */
+/* [id="slowmo"] {
+position: absolute;
+top: 20px;
+right: 20px;
+padding: 10px;
+border: 0;
+font-size: 1rem;
+background: #FEDC2A;
+color: #5A3B5D;
+font-weight: bold;
+cursor: pointer;
+transition: all .275s;
+}
+
+[id="slowmo"] span {
+display: block;
+font-weight: normal;
+}
+
+[id="slowmo"]:hover,
+[id="slowmo"]:focus {
+background: #5A3B5D;
+color: #FEDC2A;
+}
+
+[id="slowmo"].is-slowmo span:after {
+content: 'Activated';
+display: block;
+font-weight: bold;
+}
+
+/* When slowmotion is activated
+
+.is-slowmo + .device .open-main-nav .burger,
+.is-slowmo + .device .open-main-nav .burger:before,
+.is-slowmo + .device .open-main-nav .burger:after,
+.is-slowmo + .device .main-nav,
+.is-slowmo + .device .main-nav::before,
+.is-slowmo + .device .main-nav a {
+transition-duration: 3s;
+}
+.is-slowmo + .device .main-nav li:nth-child(1) a {
+transition-delay: 1750ms
+}
+.is-slowmo + .device .main-nav li:nth-child(2) a {
+transition-delay: 2250ms
+}
+.is-slowmo + .device .main-nav li:nth-child(3) a {
+transition-delay: 2750ms
+}
+.is-slowmo + .device .main-nav li:nth-child(4) a {
+transition-delay: 3250ms
+}
+.is-slowmo + .device .main-nav li:nth-child(5) a {
+transition-delay: 3750ms
+}
+
+/* Notice
+.notice {
+position: absolute;
+bottom: -15px;
+left: 0; right: 0;
+padding: 20px;
+background: #F2F2F2;
+color: #5A3B5D;
+font-size: 14px;
+font-weight: 400;
+line-height: 1.5;
+z-index: 100;
+text-align: center;
+}
+.notice strong {
+font-weight: 700;
+}
+.notice a {
+padding: 2px 3px;
+background: #FEDC2A;
+text-decoration: none;
+} */
