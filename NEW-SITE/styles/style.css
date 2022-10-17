@@ -1615,7 +1615,6 @@ h2 {
     text-align: center;
   }
   .nav:nth-child(3) {
-    border: 3px solid red;
     height: auto;
   }
 }
@@ -1734,4 +1733,7 @@ h2 {
     height: 100vh;
     overflow: hidden;
   }
+}
+.footer2 p {
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */
