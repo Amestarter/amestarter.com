@@ -393,6 +393,9 @@ html {
   transition: all 0.5s ease 0.8s;
   display: none;
 }
+.nav-links a{
+  font-size: clamp(1rem, 1.4rem, 1.5vw);
+}
 
 .box .infobox {
   -webkit-animation-name: leftslide;
@@ -407,7 +410,8 @@ html {
   margin: 2rem;
   font-family: Poppins;
   color: #ffffff;
-  font-size: 65px;
+  // font-size: 65px;
+  font-size: clamp(1.5rem, 2rem, 2.2vw);
   font-weight: 600;
   line-height: 90px;
   text-align: left;
