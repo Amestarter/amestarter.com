@@ -35,6 +35,33 @@ ul {
   list-style: none;
 }
 
+blockquote,
+body,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+html,
+iframe,
+legend,
+li,
+ol,
+p,
+pre,
+textarea,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -180,6 +207,7 @@ ul {
 }
 .hero .container .explorebtn,
 .hero .container .createbtn {
+  margin-right: 1rem;
   padding: 0.5rem;
   background-color: transparent;
   border-radius: 5px;
@@ -193,6 +221,9 @@ ul {
 .hero .container .explorebtn:hover,
 .hero .container .createbtn:hover {
   background-color: #ffffff;
+}
+.hero .container .explorebtn:hover a,
+.hero .container .createbtn:hover a {
   color: #252954;
 }
 .hero .container .display .displayImg {
@@ -410,11 +441,17 @@ footer .footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 2rem;
+  flex-direction: column;
+  padding: 2vh 0;
 }
 footer .footer .project {
   flex: 1.5;
+  width: 80%;
+}
+@media (max-width: 470px) {
+  footer .footer .project {
+    order: 3;
+  }
 }
 footer .footer .project h4 {
   font-weight: 600;
@@ -425,6 +462,7 @@ footer .footer .project p {
   font-size: clamp(1rem, 1.5rem, 1.5vw);
   font-weight: 300;
   margin: 0.2rem 0;
+  letter-spacing: 1px;
 }
 footer .footer .project div {
   display: flex;
@@ -435,16 +473,29 @@ footer .footer .project div {
 footer .footer .company,
 footer .footer .socials {
   flex: 1;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 footer .footer .company h5,
 footer .footer .socials h5 {
   font-size: clamp(1.35rem, 1.7rem, 1.75vw);
   font-weight: 400;
+  margin: 0.4rem 0;
 }
 footer .footer .company p,
 footer .footer .socials p {
   font-size: clamp(1rem, 1.5rem, 1.5vw);
   font-weight: 300;
+  margin: 0.3rem 0;
+}
+@media (min-width: 470px) {
+  footer .footer {
+    flex-direction: row;
+    gap: 2rem;
+  }
 }
 footer .footer2 p {
   text-align: center;

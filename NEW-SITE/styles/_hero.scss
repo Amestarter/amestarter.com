@@ -38,6 +38,7 @@
     }
     .explorebtn,
     .createbtn {
+      margin-right: 1rem;
       padding: 0.5rem;
       background-color: transparent;
       border-radius: 5px;
@@ -49,14 +50,12 @@
       transition: all 0.3s ease;
       &:hover {
         background-color: #ffffff;
-        color: #252954;
+        a {
+          color: #252954;
+        }
       }
     }
     .display {
-      //   display: none;
-      //   @media (min-width: 600px) {
-      //     display: block;
-      //   }
       .displayImg {
         width: 100%;
         height: 100%;
