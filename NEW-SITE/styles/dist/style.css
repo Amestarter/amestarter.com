@@ -1288,8 +1288,7 @@ h2 {
     align-items: center;
     width: 100%;
   }
-}
-@media screen and (max-width: 825px) {
+
   .nav-links {
     margin: 0;
     padding: 0;
@@ -1431,6 +1430,11 @@ h2 {
   .toggle .line3 {
     -webkit-transform: rotate(45deg) translate(-5px, -20px);
     transform: rotate(45deg) translate(-5px, -20px);
+  }
+}
+@media screen and (min-width: 701px) {
+  .container-nav {
+    display: none;
   }
 }
 @media screen and (max-width: 700px) {
