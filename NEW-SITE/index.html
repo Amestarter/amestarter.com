@@ -6,21 +6,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="styles/style.css">
+    <!-- <link rel="stylesheet" href="./test/style.css"> -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Ceviche+One&family=Oxygen:wght@300;400;700&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
 </head>
 <body>
     <div class="landingpage">
-        <div class="navbar">
+      <div class="container-nav">
+        <button id="burger" class="open-main-nav nav-toggle">
+           <span class="burger"></span>
+           <!-- <span class="burger-text">Menu</span> -->
+        </button>
+        <nav class="main-nav" id="main-nav">
+           <ol>
+              <li class="nav-lists">
+                 <a href="#">About</a>
+              </li>
+              <li class="nav-lists">
+                 <a href="#">Products</a>
+              </li>
+              <li class="nav-lists">
+                 <a href="#test">Fund Management</a>
+              </li>
+              <li class="nav-lists">
+                 <a href="#">Contact</a>
+              </li>
+              <li class="nav-lists">
+                 <a href="#">Launch App</a>
+              </li>
+           </ol>
+        </nav>
+        
+     </div>
+     
+        <div class="navbar" id="navbar">
           <a class="navlogo">AMESTARTER</a>
           <button class="hamburger">
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+              <!-- <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
                 <path d="M3 12h18M3 6h18M3 18h18"/>
-              </svg>
+              </svg> -->
+              <div class="line1"></div>
+              <div class="line2"></div>
+              <div class="line3"></div>
             </button>
-          <div class="navlinkwrap">
+          <div class="navlinkwrap nav-links">
             <span class="navlink selectedlink">Home</span>
             <span class="navlink">My Profile</span>
             <span class="navlink">Activity</span>
             <span class="navlink">How It Works</span>
+            <span class="buttonwrap">
+                <button class="createbtn selectedbtn">Launch App</button>
+                <!-- <button class="createbtn">SIGN IN</button> -->
+            </span>
           </div>
           <div class="buttonwrap">
             <button class="createbtn selectedbtn">Launch App</button>
@@ -88,7 +131,7 @@
                <div class="slider-inner-container">
                   <div class="slide active1" style="background: transparent;">
                      <div class="image-container" style="background: url('./assets/images/bridge.png');">
-                        <img src="../assets/images/bridge.png">
+                        <img src="../assets/images/submain.png">
                      </div>
                      <div class="caption-container">
                         <div class="caption">
@@ -111,7 +154,7 @@
                   </div>
                   <div class="slide" style="background: transparent;">
                      <div class="image-container" style="background: url('./assets/images/launchpad.png');">
-                        <img src="../assets/images/launchpad.png">
+                        <img src="../assets/images/submain.png">
                      </div>
                      <div class="caption-container">
                         <div class="caption">
@@ -133,7 +176,7 @@
                   </div>
                   <div class="slide" style="background: transparent;">
                      <div class="image-container" style="background:url('./assets/images/game-guild.png'); background-size: cover; background-position: center;">
-                        <img src="../assets/images/game-guild.png">
+                        <img src="../assets/images/submain.png">
                      </div>
                      <div class="caption-container">
                         <div class="caption">
@@ -158,7 +201,7 @@
                   </div>
                   <div class="slide" style="background: transparent;">
                      <div class="image-container" style="background: url('./assets/images/marketplace.png'); transform: scale(0.8); background-size: cover; background-position: center;">
-                        <img src="../assets/images/marketplace.png">
+                        <img src="../assets/images/submain.png">
                      </div>
                      <div class="caption-container">
                         <div class="caption">
@@ -183,7 +226,7 @@
                   </div>
                   <div class="slide" style="background: transparent;">
                      <div class="image-container" style="background: url('./assets/images/lending.png');">
-                        <img src="../assets/images/lending.png">
+                        <img src="../assets/images/submain.png">
                      </div>
                      <div class="caption-container">
                         <div class="caption">
@@ -209,8 +252,8 @@
                </div>
             </div>      
                <div class="controls">
-                  <div class="prev"><i class="fa fa-chevron-circle-left" style="font-size: 34px;"></i></div>
-                  <div class="next"><i class="fa fa-chevron-circle-right" style="font-size: 34px;"></i></div>
+                  <div class="prev"> </div>
+                  <div class="next"> </div>
                </div>      
                <div class="indicator"></div>
          </div>
@@ -249,7 +292,7 @@
               </div>
               <p>Semper pretium libero sed quam ac integer ut</p>
             </div>
-            <div class="itemwrapper">
+            <div class="itemwrapper" id="test">
               <div class="started-items-item">
                 <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36">
           <path style="stroke:none;fill-rule:evenodd;fill:#bdbdbd;fill-opacity:1" d="M30.9453.5a16.7245 16.7245 0 0 0-11.4687 4.5508l-2.0274 1.914a35.9135 35.9135 0 0 0-2.3984 2.4805h-7.836c-.957 0-1.8437.5-2.3359 1.3203L.668 17.7891c-.1952.3242-.2226.7226-.0702 1.0664.1523.3476.4609.5976.828.6758l7.1134 1.496c.0586.0782.125.1485.1992.2188l3.1054 2.914 2.9102 3.1016c.0703.0742.1406.1406.2188.1992l1.496 7.1133c.0782.3672.3282.6758.6758.8281a1.158 1.158 0 0 0 1.0664-.0703l7.0235-4.211a2.7222 2.7222 0 0 0 1.3203-2.3358v-7.836a36.8748 36.8748 0 0 0 2.4844-2.3984l1.9101-2.0274A16.7411 16.7411 0 0 0 35.5 5.0508l-.004-1.8281C35.496 1.7187 34.2774.5 32.7774.5Zm-6.7226 22.3398a39.89 39.89 0 0 1-1.582 1.1172l-5.2813 3.5196 1.0547 5.0156 5.621-3.3711c.1172-.0703.1876-.1992.1876-.336ZM8.5234 18.6406l3.5196-5.2812a34.8776 34.8776 0 0 1 1.1172-1.582H7.2148a.3952.3952 0 0 0-.3359.1913L3.508 17.586ZM21.0781 6.75a14.3862 14.3862 0 0 1 9.8672-3.918h1.832c.211 0 .3868.1758.3868.3907v1.828c0 3.672-1.3985 7.2032-3.9141 9.8712l-1.9102 2.0273a34.7388 34.7388 0 0 1-5.996 5.0664l-5.1133 3.4102-2.711-2.8906c-.0195-.0157-.0351-.0352-.0547-.0508l-2.8906-2.7149 3.4102-5.1172c1.457-2.1796 3.1523-4.1914 5.0625-5.9921Zm5.4766 5.0273c0 1.2891-1.043 2.332-2.332 2.332-1.2891 0-2.332-1.0429-2.332-2.332 0-1.289 1.0429-2.332 2.332-2.332 1.289 0 2.332 1.043 2.332 2.332ZM9.4453 32c1.3985-1.3984 1.3985-4.043 0-5.4453-1.4023-1.3985-4.0469-1.3985-5.4453 0-1.879 1.8828-2.246 6.0703-2.3164 7.3789a.3609.3609 0 0 0 .3828.3828C3.375 34.2461 7.5625 33.879 9.4454 32Zm0 0"/>
@@ -259,39 +302,220 @@
             </div>
           </div>
         </div>
+        <h1>The Amestarter Timeline</h1>
+        <div>
+          <ul>
+            <li>
+              <div>
+                <time>Q2 2022</time>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+      </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <time>Q3 2022</time>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+      </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <time>Q4 2022</time>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+      </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <time>Q1 2023</time>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+      </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <time>Q2 2023</time>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+      </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <time>Q3 2023</time>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+      </p>
+              </div>
+            </li>
+            <li>
+              <div>
+                <time>Q4 2023</time>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+      </p>
+              </div>
+            </li>
+          </ul>
+          
+        </div>
+          
+        <div class="headText">
+          <h2>Frequently Asked Questions</h2>
+          <div class="container">
+            <div class="wrapper">
+              <button class="toggle">
+                What is Distant Finance?
+                <i class="fas fa-plus icon"></i>
+              </button>
+              <div class="content">
+                <p>
+                  Distant Finance is an ecosystem built on the KuCoin Community
+                  Chain that bridges the void between NFTs and the metaverse to
+                  their application in the real world, making the gateway between
+                  the digital and the physical world an imaginary line. <br />
+                  We will be the first in line with a slew of products that
+                  embodies everything needed in an NFT Ecosystem.
+                </p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <button class="toggle">
+                What products constitute the Distant Finance ecosystem?
+                <i class="fas fa-plus icon"></i>
+              </button>
+              <div class="content">
+                <p>
+                  Distant Finance offers a wide range of DeFi and NFT products and
+                  sub-products such as: <br />
+                  NFT marketplace<br />
+                  INO launchpad<br />
+                  NFT bridge<br />
+                  Lending Pool<br />
+                  Game Guild<br />
+                  and other DeFi integrated services such as staking to users.
+                  <br />
+                  Other products are in line for release but mostly will be
+                  considered as sub-products
+                </p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <button class="toggle">
+                What is the Distant Finance Incubator program?
+                <i class="fas fa-plus icon"></i>
+              </button>
+              <div class="content">
+                <p>
+                  A strategic fundraising program for early-stage NFT related
+                  projects that helps develop infant project ideas from the ground
+                  up before becoming mainstream projects. <br />Access to the
+                  Launchpad and a decentralized community support are part of the
+                  benefits a project gets to enjoy on the Distant Launchpad
+                </p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <button class="toggle">
+                Distant Lending (D'Lend)
+                <i class="fas fa-plus icon"></i>
+              </button>
+              <div class="content">
+                <p>
+                  Distant Lending allows NFT holders to utilize their NFT in
+                  getting instant loans when needed without having to sell their
+                  NFT collection. Borrowers can finalize and get funding from
+                  lenders in exchange for interest at the end of the loan period.
+                </p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <button class="toggle">
+                What is the $VOID token and its utilities?
+                <i class="fas fa-plus icon"></i>
+              </button>
+              <div class="content">
+                <p>
+                  $VOID is a KRC-20 token, the native token of the Distant Finance
+                  ecosystem that allows holders to stake, access launchpad
+                  features, and governance voting. It is the fuel behind our
+                  ecosystem that offers a wide range of benefits to the holders
+                  from the use of the products released on the Distant Ecosystem.
+                </p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <button class="toggle">
+                What is the Distant Finance DAO?
+                <i class="fas fa-plus icon"></i>
+              </button>
+              <div class="content">
+                <p>
+                  The Distant DAO is our path to full decentralization. Starting
+                  off with the Quango, our semi decentralized structure, we will
+                  collectively build the ecosystem before going into full
+                  decentralization <br />
+                  The community will be allowed to decide on how Distant Finance
+                  should operate. Every decision-making will have to go through
+                  the DAO before seeing they are implemented on the platform.
+                </p>
+              </div>
+            </div>
+            <div class="wrapper">
+              <button class="toggle">
+                When is the official launch
+                <i class="fas fa-plus icon"></i>
+              </button>
+              <div class="content">
+                <p>
+                  The launch for the ecosystem was slated for July. <br />Our
+                  first product will be the NFT marketplace with beta phases for
+                  complex systems of all our products <br />
+                </p>
+              </div>
+            </div>
+            <div class="doc">
+               <a href="https://docs.distant.finance" target="_blank" class="docs"> Whitepaper </a>
+            </div>
+          </div>
+        </div>
         
         <div class="footer">
           <div class="footer-main">
             Etiam et id tincidunt faucibus mollis a sociis pretium fermentum quis magna faucibus lacus.
           </div>
           <div class="footer-navigate">
-            <div class="nav">
-              <h5>Marketplace</h5>
-              <p>Home</p>
-              <p>Activity</p>
-              <p>Discover</p>
-              <p>Learn more</p>
+            <div class="nav" style="margin:30px;">
+              <h5>Amestarter</h5>
+              <p>Lorem ipsum dolor sit amet Lorem, ipsum dolor.</p>
+              <div class="icon-social" style="display:flex;">
+                <p><img src="c.jpg" alt=""></p>
+              <p><img src="b.jpg" alt=""></p>
+              <p><img src="a.jpg" alt=""></p>
+              </div>
             </div>
-            <div class="nav">
+            <div class="nav" style="margin:30px;">
               <h5>Company</h5>
               <p>About Us</p>
               <p>Services</p>
               <p>Portfolio</p>
             </div>
-            <div class="nav">
+            <div class="nav" style="margin:30px;">
+              <!-- <div class="nav" > -->
               <h5>Contact</h5>
               <p>Facebook</p>
               <p>Instagram</p>
               <p>Twitter</p>
               <p>Email</p>
-            </div>
+            <!-- </div> -->
           </div>
         </div>
         <div class="footer2">
-          <div></div>
-          <p>Copyright &copy; 2021 Gaslur</p>
+          <!-- <div> <p>Copyright &copy; 2021 Amestarter</p></div> -->
+          <p>Copyright &copy; 2021 Amestarter</p>
         </div>
       </div>
+      
       <script src="script.js"></script>
+      <script src="roadmap.js"></script>
+      <script src="menu.js"></script>
 </body>
 </html>
