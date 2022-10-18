@@ -1,0 +1,92 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  //   height: min(70px, 20%);
+  height: 70px;
+  background-color: black;
+  color: white;
+  .logo {
+    text-align: center;
+    padding: 0 5%;
+  }
+  .navLinks {
+    display: none;
+    @media (min-width: 600px) {
+      display: flex;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: 2rem;
+    }
+    .navlink {
+      font-size: clamp(1.35rem, 1.8rem, 1.8vw);
+    }
+  }
+  .launchApp {
+    padding: 0 5%;
+    cursor: pointer;
+    display: none;
+    span {
+      border: 1px solid #fff;
+      padding: 0.5rem;
+      border-radius: 6px;
+    }
+    @media (min-width: 600px) {
+      display: block;
+    }
+  }
+  .hamburger {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    transition: all 0.7s ease;
+    z-index: 9;
+    @media (min-width: 600px) {
+      display: none;
+    }
+  }
+}
+.mobileNav {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  left: 0;
+  top: 0;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  overflow: hidden;
+  display: none;
+  z-index: 20;
+  .closeNav {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    z-index: 10;
+  }
+  .main-nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ul {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      padding: 0;
+      margin: 5rem 0;
+      gap: 2rem;
+      li {
+        font-size: clamp(1.35rem, 1.8rem, 1.8vw);
+        transition: all 0.4s ease;
+        &:hover {
+          transform: translateY(-5px);
+        }
+      }
+    }
+  }
+}
