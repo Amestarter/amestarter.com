@@ -366,7 +366,8 @@ html {
   font-family: "Poppins";
   font-style: normal;
   font-weight: 500;
-  font-size: 2rem;
+  /* font-size: 2rem; */
+  font-size: clamp(1rem, 1.4rem, 1.5vw);
 }
 
 .navbar .createbtn.selectedbtn {
