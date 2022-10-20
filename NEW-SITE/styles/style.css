@@ -210,9 +210,9 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -245,8 +245,6 @@ ul {
           flex: 1;
   font-family: Poppins;
   color: #ffffff;
-  line-height: 1.1;
-  letter-spacing: 1.1px;
   text-align: left;
 }
 .hero .container .infobox-boldtext {
@@ -259,6 +257,7 @@ ul {
 }
 .hero .container .explorebtn,
 .hero .container .createbtn {
+  margin: 1.3rem;
   margin-right: 1rem;
   padding: 0.5rem;
   background-color: transparent;
@@ -389,7 +388,7 @@ ul {
   padding: 50px 0;
 }
 
-ul li {
+ul .roadmap-lists {
   position: relative;
   list-style-type: none;
   width: 6px;
@@ -398,7 +397,7 @@ ul li {
   padding-top: 50px;
 }
 
-ul li::after {
+ul .roadmap-lists::after {
   background: white;
   content: "";
   width: 25px;
@@ -411,7 +410,7 @@ ul li::after {
   bottom: 0;
 }
 
-ul li div {
+ul .roadmap-lists div {
   position: relative;
   width: 400px;
   padding: 15px;
@@ -420,11 +419,11 @@ ul li div {
   background: rgba(42, 50, 113, 0.28);
 }
 
-ul li:nth-child(odd) div {
+ul .roadmap-lists:nth-child(odd) div {
   left: 45px;
 }
 
-ul li:nth-child(even) div {
+ul .roadmap-lists:nth-child(even) div {
   left: -445px;
 }
 
@@ -442,17 +441,17 @@ ul li div {
   transition: all 0.5s ease-in-out;
 }
 
-ul li:nth-child(odd) div {
+ul .roadmap-lists:nth-child(odd) div {
   -webkit-transform: translate3d(200px, 0, 0);
   transform: translate3d(200px, 0, 0);
 }
 
-ul li:nth-child(even) div {
+ul .roadmap-lists:nth-child(even) div {
   -webkit-transform: translate3d(-200px, 0, 0);
   transform: translate3d(-200px, 0, 0);
 }
 
-ul li.show div {
+ul .roadmap-lists.show div {
   -webkit-transform: none;
   transform: none;
   visibility: visible;
@@ -460,13 +459,13 @@ ul li.show div {
 }
 
 @media screen and (max-width: 900px) {
-  ul li {
+  ul .roadmap-lists {
     margin: 0 20px;
   }
-  ul li div {
+  ul .roadmap-lists div {
     width: 250px;
   }
-  ul li:nth-child(even) div {
+  ul .roadmap-lists:nth-child(even) div {
     left: 45px;
   }
 }
@@ -572,6 +571,11 @@ h2 {
 
 .docs:hover {
   color: blue;
+}
+
+.stop-scrolling {
+  height: 100vh;
+  overflow: hidden;
 }
 
 footer .container h2 {

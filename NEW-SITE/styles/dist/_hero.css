@@ -1,0 +1,66 @@
+.hero {
+  background-image: url("https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1074&q=80");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+}
+.hero .container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  padding: 5vh 5vw;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  position: relative;
+  margin: 0;
+  z-index: 1;
+}
+@media (min-width: 700px) {
+  .hero .container {
+    flex-direction: row;
+  }
+}
+.hero .container .heroContent,
+.hero .container .display {
+  flex: 1;
+  font-family: Poppins;
+  color: #ffffff;
+  text-align: left;
+}
+.hero .container .infobox-boldtext {
+  font-size: clamp(2.5rem, 3rem, 3.5vw);
+  font-weight: 600;
+}
+.hero .container .infobox-slimtext {
+  font-size: clamp(1.45rem, 1.85rem, 1.9vw);
+  font-weight: 400;
+}
+.hero .container .explorebtn,
+.hero .container .createbtn {
+  margin: 1.3rem;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  background-color: transparent;
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+  font-size: clamp(1rem, 1.5rem, 1.5vw);
+  font-weight: 400;
+  cursor: pointer;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+.hero .container .explorebtn:hover,
+.hero .container .createbtn:hover {
+  background-color: #ffffff;
+}
+.hero .container .explorebtn:hover a,
+.hero .container .createbtn:hover a {
+  color: #252954;
+}
+.hero .container .display .displayImg {
+  width: 100%;
+  height: 100%;
+}

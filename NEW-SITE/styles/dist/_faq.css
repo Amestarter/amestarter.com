@@ -12,12 +12,14 @@
   margin-right: 15vw;
   margin-top: 5vh;
 }
+
 .wrapper {
   margin-bottom: 10px;
   padding: 7px 20px;
   border-radius: 5px;
   border: 0.5px solid rebeccapurple;
 }
+
 .img {
   display: none;
 }
@@ -27,6 +29,7 @@
   font-family: "Poppins", sans-serif;
   color: antiquewhite;
 }
+
 .toggle {
   width: 100%;
   background-color: transparent;
@@ -41,6 +44,7 @@
   cursor: pointer;
   padding: 5px 0;
 }
+
 .content {
   font-size: 14px;
   text-align: justify;
@@ -51,6 +55,7 @@
   transition: all 1s;
   backdrop-filter: blur(5px);
 }
+
 a {
   text-decoration: none;
   align-items: center;
@@ -65,10 +70,12 @@ h2 {
   letter-spacing: 1px;
   padding: 5px 0px;
 }
+
 .doc {
   margin: 20px auto;
   display: table;
 }
+
 .docs {
   padding: 10px 30px;
   border-radius: 5px;
@@ -82,9 +89,10 @@ h2 {
 .docs:hover {
   color: blue;
 }
-.stop-scrolling{
-  height:100vh;
-  overflow:hidden;
+
+.stop-scrolling {
+  height: 100vh;
+  overflow: hidden;
 }
 
 footer .container h2 {
@@ -97,6 +105,7 @@ footer .container h2 {
   .toggle {
     font-size: 12px;
   }
+
   .content {
     font-size: 11px;
     text-align: justify;
@@ -116,6 +125,7 @@ footer .container h2 {
     justify-items: flex-start;
     align-items: center;
   }
+
   .image {
     background-color: transparent;
     background-image: url(./faq.svg);

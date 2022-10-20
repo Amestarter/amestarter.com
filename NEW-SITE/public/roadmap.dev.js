@@ -1,6 +1,6 @@
 "use strict";
 
-var items = document.querySelectorAll("li");
+var items = document.querySelectorAll(".roadmap-lists");
 
 function isItemInView(item) {
   var rect = item.getBoundingClientRect();
