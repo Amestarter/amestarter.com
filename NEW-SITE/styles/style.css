@@ -29,6 +29,7 @@ a {
 
 .is-open {
   display: block !important;
+  transition: all 0.5s ease-in-out;
 }
 
 ul {
@@ -110,9 +111,11 @@ ul {
   align-items: center;
   width: 50px;
   height: 50px;
-  cursor: pointer;
   transition: all 0.7s ease;
   z-index: 9;
+}
+.navbar .hamburger svg {
+  cursor: pointer;
 }
 @media (min-width: 600px) {
   .navbar .hamburger {
@@ -133,16 +136,20 @@ ul {
   overflow: hidden;
   display: none;
   z-index: 20;
+  transition: all 0.5s ease-in-out;
 }
 .mobileNav .closeNav {
   position: absolute;
   top: 3%;
   right: 3%;
+  transition: all 0.5s ease-in-out;
   z-index: 10;
+  cursor: pointer;
 }
 .mobileNav .main-nav {
   display: flex;
   justify-content: center;
+  height: 100%;
   align-items: center;
 }
 .mobileNav .main-nav ul {
@@ -156,7 +163,11 @@ ul {
 }
 .mobileNav .main-nav ul li {
   font-size: clamp(1.35rem, 1.8rem, 1.8vw);
+  letter-spacing: 0.02rem;
   transition: all 0.4s ease;
+}
+.mobileNav .main-nav ul li a {
+  color: black;
 }
 .mobileNav .main-nav ul li:hover {
   transform: translateY(-5px);
@@ -202,6 +213,7 @@ ul {
 .hero .container .infobox-slimtext {
   font-size: clamp(1.45rem, 1.85rem, 1.9vw);
   font-weight: 400;
+  margin: 20px 0;
 }
 .hero .container .explorebtn,
 .hero .container .createbtn {
@@ -231,9 +243,8 @@ ul {
   height: 100%;
 }
 
-<<<<<<< Updated upstream
 .section {
-  padding: 70px 30px;
+  padding: 0 5vw;
 }
 
 .container-products {
@@ -245,12 +256,8 @@ ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 350px));
   grid-gap: 15px 15px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
+  justify-content: center;
+  align-items: baseline;
 }
 
 .grid-row .grid-item span {
@@ -258,10 +265,10 @@ ul {
   /*   line-height: 1; */
 }
 
-h3 {
+.offers h3 {
   text-align: center;
-  font-size: clamp(3rem, 3.5rem, 3vw);
-  margin: 40px;
+  font-size: clamp(2rem, 2.5rem, 3vw);
+  margin: 20px;
 }
 
 .grid-row .grid-item h3 {
@@ -270,17 +277,11 @@ h3 {
 }
 
 .grid-row .grid-item:hover {
-  -webkit-filter: contrast(0.7);
-          filter: contrast(0.7);
+  filter: contrast(0.7);
 }
 
 .grid-row .grid-item {
-  -webkit-transition: -webkit-filter 0.5s ease;
-  transition: -webkit-filter 0.5s ease;
   transition: filter 0.5s ease;
-  transition: filter 0.5s ease, -webkit-filter 0.5s ease;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 400px;
   cursor: pointer;
@@ -289,10 +290,7 @@ h3 {
   color: black;
   text-align: center;
   font-family: sans-serif;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   /*   align-items: space-between; */
 }
 
@@ -306,32 +304,6 @@ a {
   margin: auto;
   margin-top: 10px;
   border-radius: 100%;
-=======
-.offers {
-  margin: 2rem 0;
-  padding: 0 5vw;
-  font-family: "Lato", sans-serif;
-}
-.offers .title {
-  font-size: clamp(1.5rem, 2rem, 2.5vw);
-}
-.offers .controls {
-  display: flex;
-  justify-content: end;
-  align-items: center;
-}
-.offers .controls .prev,
-.offers .controls .next {
-  cursor: pointer;
-  padding: 0.35rem;
-  transition: all 0.35s ease-in-out;
-}
-.offers .controls .prev:hover {
-  transform: translateX(-5px);
-}
-.offers .controls .next:hover {
-  transform: translateX(5px);
->>>>>>> Stashed changes
 }
 
 .started {
@@ -422,7 +394,7 @@ ul .roadmap-lists:nth-child(even) div {
 
 time {
   font-weight: bold;
-  font-size: 18px;
+  font-size: clamp(1.35rem, 1.8rem, 1.8vw);
   display: block;
   margin-bottom: 10px;
 }
@@ -458,26 +430,25 @@ ul .roadmap-lists.show div {
     left: 45px;
   }
 }
-.grid {
-  padding-top: 15%;
+.headText {
+  padding: 0 5vw;
 }
-
-@media (min-width: 720px) {
-  .grid {
-    padding-top: 10%;
-  }
+.headText .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 50px;
 }
-.container {
-  margin-left: 15vw;
-  margin-right: 15vw;
-  margin-top: 5vh;
-}
-
-.wrapper {
-  margin-bottom: 10px;
+.headText .container .wrapper {
+  width: min(100%, 500px);
   padding: 7px 20px;
   border-radius: 5px;
   border: 0.5px solid rebeccapurple;
+}
+.headText .container .wrapper .toggle {
+  font-size: clamp(1.1rem, 1.2vw, 1.32rem);
 }
 
 .img {
@@ -503,6 +474,7 @@ ul .roadmap-lists.show div {
   outline: none;
   cursor: pointer;
   padding: 5px 0;
+  gap: 10px;
 }
 
 .content {
@@ -565,7 +537,7 @@ footer .container h2 {
 }
 
 @media only screen and (max-width: 410px) {
-  .toggle {
+  .toggle i {
     font-size: 12px;
   }
   .content {
@@ -611,11 +583,6 @@ footer .footer .project {
   flex: 1.5;
   width: 80%;
 }
-@media (max-width: 470px) {
-  footer .footer .project {
-    order: 3;
-  }
-}
 footer .footer .project h4 {
   font-weight: 600;
   font-size: clamp(1.5rem, 2rem, 2vw);
@@ -633,8 +600,15 @@ footer .footer .project div {
   align-items: center;
   gap: 1rem;
 }
-footer .footer .company,
-footer .footer .socials {
+footer .footer aside {
+  flex: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+footer .footer aside .company,
+footer .footer aside .socials {
   flex: 1;
   width: 100%;
   display: flex;
@@ -642,14 +616,14 @@ footer .footer .socials {
   align-items: center;
   flex-direction: column;
 }
-footer .footer .company h5,
-footer .footer .socials h5 {
+footer .footer aside .company h5,
+footer .footer aside .socials h5 {
   font-size: clamp(1.35rem, 1.7rem, 1.75vw);
   font-weight: 400;
   margin: 0.4rem 0;
 }
-footer .footer .company p,
-footer .footer .socials p {
+footer .footer aside .company p,
+footer .footer aside .socials p {
   font-size: clamp(1rem, 1.5rem, 1.5vw);
   font-weight: 300;
   margin: 0.3rem 0;

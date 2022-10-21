@@ -43,7 +43,7 @@ ul .roadmap-lists:nth-child(even) div {
 
 time {
   font-weight: bold;
-  font-size: 18px;
+  font-size: clamp(1.35rem, 1.8rem, 1.8vw);
   display: block;
   margin-bottom: 10px;
 }
@@ -71,14 +71,14 @@ ul .roadmap-lists.show div {
   visibility: visible;
   opacity: 1;
 }
-  @media screen and (max-width: 900px) {
-    ul .roadmap-lists{
-      margin: 0 20px; 
-    }
-    ul .roadmap-lists div {
-      width: 250px;
-    }
-    ul .roadmap-lists:nth-child(even) div {
+@media screen and (max-width: 900px) {
+  ul .roadmap-lists {
+    margin: 0 20px;
+  }
+  ul .roadmap-lists div {
+    width: 250px;
+  }
+  ul .roadmap-lists:nth-child(even) div {
     left: 45px;
   }
 }

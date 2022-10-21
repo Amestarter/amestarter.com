@@ -1,23 +1,24 @@
-.grid {
-  padding-top: 15%;
-}
-
-@media (min-width: 720px) {
-  .grid {
-    padding-top: 10%;
+.headText {
+  padding: 0 5vw;
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 2rem 50px;
+    .wrapper {
+      width: min(100%, 500px);
+      padding: 7px 20px;
+      border-radius: 5px;
+      border: 0.5px solid rebeccapurple;
+      .toggle {
+        font-size: clamp(1.1rem, 1.2vw, 1.32rem);
+      }
+    }
   }
 }
-.container {
-  margin-left: 15vw;
-  margin-right: 15vw;
-  margin-top: 5vh;
-}
-.wrapper {
-  margin-bottom: 10px;
-  padding: 7px 20px;
-  border-radius: 5px;
-  border: 0.5px solid rebeccapurple;
-}
+
 .img {
   display: none;
 }
@@ -40,6 +41,7 @@
   outline: none;
   cursor: pointer;
   padding: 5px 0;
+  gap: 10px;
 }
 .content {
   font-size: 14px;
@@ -82,9 +84,9 @@ h2 {
 .docs:hover {
   color: blue;
 }
-.stop-scrolling{
-  height:100vh;
-  overflow:hidden;
+.stop-scrolling {
+  height: 100vh;
+  overflow: hidden;
 }
 
 footer .container h2 {
@@ -94,7 +96,7 @@ footer .container h2 {
 }
 
 @media only screen and (max-width: 410px) {
-  .toggle {
+  .toggle i {
     font-size: 12px;
   }
   .content {

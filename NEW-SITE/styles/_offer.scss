@@ -1,7 +1,5 @@
-<<<<<<< Updated upstream
-
 .section {
-  padding: 70px 30px;
+  padding: 0 5vw;
 }
 .container-products {
   max-width: 95vw;
@@ -17,12 +15,12 @@
 
 .grid-row .grid-item span {
   padding: 10px;
-/*   line-height: 1; */
+  /*   line-height: 1; */
 }
-h3{
+.offers h3 {
   text-align: center;
-  font-size: clamp(3rem,3.5rem,3vw);
-  margin:40px;
+  font-size: clamp(2rem, 2.5rem, 3vw);
+  margin: 20px;
 }
 .grid-row .grid-item h3 {
   font-size: 20px;
@@ -34,52 +32,29 @@ h3{
 .grid-row .grid-item {
   transition: filter 0.5s ease;
   display: flex;
-  height:400px;
+  height: 400px;
   cursor: pointer;
-  margin:auto;
-  background: linear-gradient(45deg,rgba(17, 17, 139, 0.418), rgba(233, 8, 184, 0.418));
+  margin: auto;
+  background: linear-gradient(
+    45deg,
+    rgba(17, 17, 139, 0.418),
+    rgba(233, 8, 184, 0.418)
+  );
   // box-shadow: var(--shadow);
   // color: var(--dark);
-  color:black;
+  color: black;
   text-align: center;
   font-family: sans-serif;
   flex-direction: column;
-/*   align-items: space-between; */
+  /*   align-items: space-between; */
 }
-a{
+a {
   text-decoration: none;
 }
-.grid-item img{
-  height:130px;
-  width:130px;
-  margin:auto;
-  margin-top:10px;
-  border-radius:100%;
-=======
-.offers {
-  margin: 2rem 0;
-  padding: 0 5vw;
-  font-family: "Lato", sans-serif;
-  .title {
-    font-size: clamp(1.5rem, 2rem, 2.5vw);
-  }
-  .controls {
-    display: flex;
-    justify-content: end;
-    align-items: center;
-    // gap: 5px;
-    .prev,
-    .next {
-      cursor: pointer;
-      padding: 0.35rem;
-      transition: all 0.35s ease-in-out;
-    }
-    .prev:hover {
-      transform: translateX(-5px);
-    }
-    .next:hover {
-      transform: translateX(5px);
-    }
-  }
->>>>>>> Stashed changes
+.grid-item img {
+  height: 130px;
+  width: 130px;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 100%;
 }
