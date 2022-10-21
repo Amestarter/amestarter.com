@@ -283,39 +283,80 @@ ul {
   height: 100%;
 }
 
-.items {
-  margin: 2rem 0;
-  padding: 0 5vw;
-  font-family: "Lato", sans-serif;
+.section {
+  padding: 70px 30px;
 }
-.items .title {
-  font-size: clamp(1.5rem, 2rem, 2.5vw);
+
+.container-products {
+  max-width: 95vw;
+  margin: auto;
 }
-.items .controls {
+
+.grid-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 350px));
+  grid-gap: 15px 15px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.grid-row .grid-item span {
+  padding: 10px;
+  /*   line-height: 1; */
+}
+
+h3 {
+  text-align: center;
+  font-size: clamp(3rem, 3.5rem, 3vw);
+  margin: 40px;
+}
+
+.grid-row .grid-item h3 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.grid-row .grid-item:hover {
+  -webkit-filter: contrast(0.7);
+          filter: contrast(0.7);
+}
+
+.grid-row .grid-item {
+  -webkit-transition: -webkit-filter 0.5s ease;
+  transition: -webkit-filter 0.5s ease;
+  transition: filter 0.5s ease;
+  transition: filter 0.5s ease, -webkit-filter 0.5s ease;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: end;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-.items .controls .prev,
-.items .controls .next {
+  height: 400px;
   cursor: pointer;
-  padding: 0.35rem;
-  -webkit-transition: all 0.35s ease-in-out;
-  transition: all 0.35s ease-in-out;
+  margin: auto;
+  background: linear-gradient(45deg, rgba(17, 17, 139, 0.418), rgba(233, 8, 184, 0.418));
+  color: black;
+  text-align: center;
+  font-family: sans-serif;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  /*   align-items: space-between; */
 }
-.items .controls .prev:hover {
-  -webkit-transform: translateX(-5px);
-          transform: translateX(-5px);
+
+a {
+  text-decoration: none;
 }
-.items .controls .next:hover {
-  -webkit-transform: translateX(5px);
-          transform: translateX(5px);
+
+.grid-item img {
+  height: 130px;
+  width: 130px;
+  margin: auto;
+  margin-top: 10px;
+  border-radius: 100%;
 }
 
 .started {
