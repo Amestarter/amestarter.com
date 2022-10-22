@@ -72,13 +72,22 @@ ul .roadmap-lists.show div {
   opacity: 1;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (min-width: 701px) and (max-width: 999px) {
+  ul .roadmap-lists div {
+    width: 250px;
+  }
+
+  ul .roadmap-lists:nth-child(even) div {
+    left: -325px;
+  }
+}
+@media screen and (max-width: 700px) {
   ul .roadmap-lists {
     margin: 0 20px;
   }
 
   ul .roadmap-lists div {
-    width: 250px;
+    width: 75vw;
   }
 
   ul .roadmap-lists:nth-child(even) div {
