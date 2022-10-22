@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Shalimar&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -75,6 +75,9 @@ ul {
 .navbar .logo {
   text-align: center;
   padding: 0 5%;
+}
+.navbar .logo a {
+  display: flex;
 }
 .navbar .navLinks {
   display: none;
@@ -593,12 +596,19 @@ footer .footer .project p {
   font-weight: 300;
   margin: 0.2rem 0;
   letter-spacing: 1px;
+  font-family: "Lato", sans-serif;
 }
 footer .footer .project div {
   display: flex;
   justify-content: flex-start;
   align-items: center;
   gap: 1rem;
+}
+footer .footer .project div a {
+  transition: all 0.3s ease-in-out;
+}
+footer .footer .project div a:hover {
+  transform: scale(1.1);
 }
 footer .footer aside {
   flex: 2;
@@ -627,6 +637,12 @@ footer .footer aside .socials p {
   font-size: clamp(1rem, 1.5rem, 1.5vw);
   font-weight: 300;
   margin: 0.3rem 0;
+  transition: all 0.3s ease-in-out;
+}
+footer .footer aside .company p:hover,
+footer .footer aside .socials p:hover {
+  transform: scale(1.03);
+  transform: translateY(-1px);
 }
 @media (min-width: 470px) {
   footer .footer {
@@ -638,4 +654,5 @@ footer .footer2 p {
   text-align: center;
   margin: 0;
   padding: 1rem 0;
+  font-family: "Shalimar", cursive;
 }/*# sourceMappingURL=style.css.map */
