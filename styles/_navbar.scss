@@ -27,12 +27,22 @@
   }
   .launchApp {
     padding: 0 5%;
-    cursor: pointer;
     display: none;
     span {
       border: 1px solid #fff;
       padding: 0.5rem;
       border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      a {
+        transition: all 0.5s ease;
+      }
+      &:hover {
+        border: 1px solid #252954;
+        a {
+          color: aqua;
+        }
+      }
     }
     @media (min-width: 600px) {
       display: block;

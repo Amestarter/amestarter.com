@@ -95,13 +95,23 @@ ul {
 }
 .navbar .launchApp {
   padding: 0 5%;
-  cursor: pointer;
   display: none;
 }
 .navbar .launchApp span {
   border: 1px solid #fff;
   padding: 0.5rem;
   border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.navbar .launchApp span a {
+  transition: all 0.5s ease;
+}
+.navbar .launchApp span:hover {
+  border: 1px solid #252954;
+}
+.navbar .launchApp span:hover a {
+  color: aqua;
 }
 @media (min-width: 600px) {
   .navbar .launchApp {
