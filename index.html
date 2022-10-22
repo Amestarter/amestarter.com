@@ -1,284 +1,722 @@
-
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <meta name="description" content="AmeStarter is a Web3.0 launchpad built on AmeChain factoring to bring in the next tranche of innovations to the Blockchain space. Commited to full and true Decentralization and ideas building taking security as paramount by building on a scalable Quantum resistant Blockchain.">
-    <meta name="author" content="">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="/favicon.ico"/>
-    <title>AmeStarter - The Web3.0 launchpad on AmeChain</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AmeStarter is a Web3.0 Dapp built on Arbitrum factoring to bring in the next tranche of innovations to the Blockchain space. Commited to full and true Decentralization and ideas building taking security as paramount, building on a scalable Layer 2 Blockchain."
+    />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./favicons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./favicons/site.webmanifest" />
+    <meta name="author" content="" />
+    <title>AmeStarter - The DeFi service PowerHouse</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ceviche+One&family=Oxygen:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Additional CSS Files -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
-
+    <link rel="icon" type="image/png" href="./favicons/favicon.ico" />
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
   </head>
-
-<body>
-
-  <!-- ***** Preloader Start ***** -->
-  <div id="js-preloader" class="js-preloader">
-    <div class="preloader-inner">
-      <span class="dot"></span>
-      <div class="dots">
-        <span></span>
-        <span></span>
-        <span></span>
+  <body>
+    <nav class="navbar">
+      <div class="logo">
+        <a href="#"
+          ><img src="./newLogo.png" width="70px" height="70px" />
+          <span>AmeStarter</span></a
+        >
       </div>
-    </div>
-  </div>
-  <!-- ***** Preloader End ***** -->
-
-  <!-- ***** Header Area Start ***** -->
-  <header class="header-area header-sticky wow slideInDown" data-wow-duration="0.75s" data-wow-delay="0s">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <nav class="main-nav">
-            <!-- ***** Logo Start ***** -->
-            <a href="index.html" class="logo" title="logo start">
-              <img src="assets/images/logo.png" alt="AmeStarter logo" width="80" height="80">
-            </a>
-            <!-- ***** Logo End ***** -->
-            <!-- ***** Menu Start ***** -->
-            <ul class="nav">
-              <li class="scroll-to-section hover-underline-animation"><a href="#top" class="active">Home</a></li>
-              <li class="scroll-to-section hover-underline-animation"><a href="#community">The Community</a></li>
-              <li class="scroll-to-section hover-underline-animation"><a href="#developers">For Developers</a></li>
-              <li class="scroll-to-section hover-underline-animation"><a href="#footer">Socials</a></li>
-              <li><div class="gradient-button"><a id="modal_trigger" href="#"><i class="fa fa-sign-in-alt"></i> Launch App</a></div></li> 
-            </ul>        
-            <a class='menu-trigger'>
-                <span>Menu</span>
-            </a>
-            <!-- ***** Menu End ***** -->
-          </nav>
+      <div class="navLinks">
+        <div class="navlink"><a href="#">Home</a></div>
+        <div class="navlink">
+          <a href="https://docs.amestarter.com">Info</a>
         </div>
+        <div class="navlink"><a href="#roadmap">Roadmap</a></div>
+        <div class="navlink"><a href="#faq">FAQ</a></div>
       </div>
+      <div class="launchApp">
+        <span> <a href="https://app.amestarter.com">Launch App</a> </span>
+      </div>
+      <div class="hamburger" id="hamburger">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 21 21"
+        >
+          <path
+            fill="none"
+            stroke="currentColor"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4.5 6.5h12m-12.002 4h11.997M4.5 14.5h11.995"
+          />
+        </svg>
+      </div>
+    </nav>
+    <div class="mobileNav">
+      <span id="burger" class="open-main-nav closeNav nav-toggle">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="40"
+          height="40"
+          preserveAspectRatio="xMidYMid meet"
+          viewBox="0 0 36 36"
+        >
+          <path
+            fill="white"
+            d="m19.41 18l7.29-7.29a1 1 0 0 0-1.41-1.41L18 16.59l-7.29-7.3A1 1 0 0 0 9.3 10.7l7.29 7.3l-7.3 7.29a1 1 0 1 0 1.41 1.41l7.3-7.29l7.29 7.29a1 1 0 0 0 1.41-1.41Z"
+            class="clr-i-outline clr-i-outline-path-1"
+          />
+          <path fill="none" d="M0 0h36v36H0z" />
+        </svg>
+      </span>
+      <nav class="main-nav" id="main-nav">
+        <ul>
+          <li class="nav-lists">
+            <a href="#">Home</a>
+          </li>
+          <li class="nav-lists">
+            <a href="https://docs.amestarter.com">Info</a>
+          </li>
+          <li class="nav-lists">
+            <a href="#roadmap">Roadmap</a>
+          </li>
+          <li class="nav-lists">
+            <a href="#faq" id="faq">Info</a>
+          </li>
+          <li class="nav-lists">
+            <a href="https://app.amestarter.com">Launch App</a>
+          </li>
+        </ul>
+      </nav>
     </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
-  
-  <div class="main-banner wow fadeIn" id="top" data-wow-duration="1s" data-wow-delay="0.5s">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="row">
-            <div class="col-lg-6 align-self-center">
-              <div class="left-content show-up header-text wow fadeInLeft" data-wow-duration="1s" data-wow-delay="1s">
-                <div class="row">
-                  <div class="col-lg-12">
-                    <h2>Built on AmeChain, &nbsp; &nbsp; &nbsp; The first Web3.0 launchpad...</h2>
-                    <p>AmeStarter is the first decentralized launchpad built on Amechain's Quantum resistant network, dedicated to Web3.0 innovations</p>
-                  </div>
-                 
+    <div class="landingpage">
+      <main class="hero">
+        <div class="container">
+          <aside class="heroContent">
+            <h1 class="infobox-boldtext">
+              Built on Arbitrum, The first Dapp Service platform for Web3.0
+            </h1>
+            <h3 class="infobox-slimtext">
+              AmeStarter is the first decentralized service platform built on
+              Arbitrum's Layer 2 network, dedicated to Web3.0 innovations
+            </h3>
+            <div class="infobox-btnwrapper">
+              <button class="explorebtn">
+                <a href="#products" id="product">Explore</a>
+              </button>
+              <button class="createbtn">
+                <a href="#gettingStarted">Get Started</a>
+              </button>
+            </div>
+          </aside>
+          <aside class="display">
+            <img
+              class="displayImg"
+              src="./Designer _Two Color.png"
+              border="0"
+            />
+          </aside>
+        </div>
+      </main>
+      <section class="offers" id="products">
+        <h3 class="title">What we Offer</h3>
+        <div class="section">
+          <div class="container-products">
+            <div class="grid-row">
+              <a href="https://docs.amestarter.com">
+                <div class="grid-item">
+                  <span>
+                    <img
+                      src="https://www.kareseniors.com.au/wp-content/uploads/2021/08/About-Us.jpg"
+                    />
+                    <h3>First Heading</h3>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.
+                    </p>
+                  </span>
                 </div>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="right-image wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.5s">
-                <img src="assets/images/submain.png" alt="Quantum resistance meets decentralized launchpad" title="keyword">
-              </div>
+              </a>
+              <a href="https://docs.amestarter.com">
+                <div class="grid-item">
+                  <span>
+                    <img
+                      src="https://www.kareseniors.com.au/wp-content/uploads/2021/08/About-Us.jpg"
+                    />
+                    <h3>First Heading</h3>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.
+                    </p>
+                  </span>
+                </div>
+              </a>
+              <a href="https://docs.amestarter.com">
+                <div class="grid-item">
+                  <span>
+                    <img
+                      src="https://www.kareseniors.com.au/wp-content/uploads/2021/08/About-Us.jpg"
+                    />
+                    <h3>First Heading</h3>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.
+                    </p>
+                  </span>
+                </div>
+              </a>
+              <a href="https://docs.amestarter.com">
+                <div class="grid-item">
+                  <span>
+                    <img
+                      src="https://www.kareseniors.com.au/wp-content/uploads/2021/08/About-Us.jpg"
+                    />
+                    <h3>First Heading</h3>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.
+                    </p>
+                  </span>
+                </div>
+              </a>
+              <a href="https://docs.amestarter.com">
+                <div class="grid-item">
+                  <span>
+                    <img
+                      src="https://www.kareseniors.com.au/wp-content/uploads/2021/08/About-Us.jpg"
+                    />
+                    <h3>First Heading</h3>
+                    <p>
+                      Lorem Ipsum is simply dummy text of the printing and
+                      typesetting industry.Lorem Ipsum is simply dummy text of
+                      the printing and typesetting industry.Lorem Ipsum is
+                      simply dummy text of the printing and typesetting
+                      industry.Lorem Ipsum is simply dummy text of the printing
+                      and typesetting industry.Lorem Ipsum is simply dummy text
+                      of the printing and typesetting industry.
+                    </p>
+                  </span>
+                </div>
+              </a>
             </div>
           </div>
+        </div>
+      </section>
+    </div>
+
+    <section class="started" id="gettingStarted">
+      <h3 class="started-boldtext">Getting started</h3>
+      <h4 class="started-slimtext" style="text-align: center; margin: 2rem">
+        Engage in the bustling ecosystem found on AmeStarter
+      </h4>
+      <div class="items">
+        <div class="itemwrapper">
+          <div class="item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+              <path
+                style="
+                  stroke: none;
+                  fill-rule: nonzero;
+                  fill: #e0e0e0;
+                  fill-opacity: 1;
+                "
+                d="M24.7969 14.6719c.4375-.4414.4375-1.1524 0-1.5938-.4414-.4375-1.1524-.4375-1.5938 0L16.5 19.7851l-2.9531-2.957c-.4414-.4375-1.1524-.4375-1.5938 0-.4375.4414-.4375 1.1524 0 1.5938l3.75 3.75a1.1246 1.1246 0 0 0 1.5938 0Zm0 0"
+              />
+              <path
+                style="
+                  stroke: none;
+                  fill-rule: evenodd;
+                  fill: #e0e0e0;
+                  fill-opacity: 1;
+                "
+                d="M18.8086.957a2.6005 2.6005 0 0 0-1.6172 0L4.8164 4.9688C3.7344 5.3202 3 6.3241 3 7.4648V15c0 9.2852 5.6563 16.0586 14.1016 19.246a2.5853 2.5853 0 0 0 1.7968 0C27.3438 31.0587 33 24.2853 33 15V7.4648a2.6182 2.6182 0 0 0-1.8164-2.496Zm-.9219 2.1368a.3738.3738 0 0 1 .2266 0l12.375 4.0117c.1601.0547.2617.1992.2617.3593V15c0 8.1914-4.9219 14.2227-12.6445 17.1367a.2815.2815 0 0 1-.211 0C10.172 29.2227 5.25 23.1914 5.25 15V7.4648c0-.1601.1016-.3046.2617-.3593Zm0 0"
+              />
+            </svg>
+          </div>
+          <p>Connect your wallet</p>
+        </div>
+        <div class="itemwrapper">
+          <div class="item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+              <path
+                style="
+                  stroke: none;
+                  fill-rule: evenodd;
+                  fill: #bdbdbd;
+                  fill-opacity: 1;
+                "
+                d="M4.125 3C2.6758 3 1.5 4.1758 1.5 5.625v5.25c0 1.4492 1.1758 2.625 2.625 2.625h27.75c1.4492 0 2.625-1.1758 2.625-2.625v-5.25C34.5 4.1758 33.3242 3 31.875 3Zm27.75 2.25H4.125c-.207 0-.375.168-.375.375v5.25c0 .207.168.375.375.375h27.75c.207 0 .375-.168.375-.375v-5.25c0-.207-.168-.375-.375-.375Zm0 0"
+              />
+              <path
+                style="
+                  stroke: none;
+                  fill-rule: nonzero;
+                  fill: #bdbdbd;
+                  fill-opacity: 1;
+                "
+                d="M4.125 15c.621 0 1.125.504 1.125 1.125v14.25c0 .207.168.375.375.375h24.75c.207 0 .375-.168.375-.375v-14.25c0-.621.504-1.125 1.125-1.125S33 15.504 33 16.125v14.25C33 31.8242 31.8242 33 30.375 33H5.625C4.1758 33 3 31.8242 3 30.375v-14.25C3 15.504 3.504 15 4.125 15Zm0 0"
+              />
+              <path
+                style="
+                  stroke: none;
+                  fill-rule: nonzero;
+                  fill: #bdbdbd;
+                  fill-opacity: 1;
+                "
+                d="M14.625 17.25c-.621 0-1.125.504-1.125 1.125s.504 1.125 1.125 1.125h6.75c.621 0 1.125-.504 1.125-1.125s-.504-1.125-1.125-1.125Zm0 0"
+              />
+            </svg>
+          </div>
+          <p>Purchase AME-X</p>
+        </div>
+        <div class="itemwrapper">
+          <div class="item">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="36"
+              height="px"
+              viewBox="0 0 36 31"
+            >
+              <path
+                style="
+                  stroke: none;
+                  fill-rule: evenodd;
+                  fill: #bdbdbd;
+                  fill-opacity: 1;
+                "
+                d="M2.832 2.9219c-.2148 0-.3867.1758-.3867.3906v24.375c0 .2148.1719.3906.3867.3906h4.9453l13.332-14.1875c1.0548-1.121 2.8165-1.1445 3.8985-.0508l8.5469 8.6407V3.3125c0-.2148-.1719-.3906-.3867-.3906Zm30.336 27.5156H2.832c-1.5039 0-2.7226-1.2305-2.7226-2.75V3.3125c0-1.5195 1.2187-2.75 2.7226-2.75h30.336c1.5039 0 2.7226 1.2305 2.7226 2.75v24.375c0 1.5195-1.2187 2.75-2.7226 2.75ZM22.8008 15.5156 10.996 28.0781H33.168c.2148 0 .3867-.1758.3867-.3906v-1.871L23.3594 15.5077a.388.388 0 0 0-.5586.0078Zm-9.4688-4.3398c0 1.5195-1.2187 2.75-2.7226 2.75-1.5 0-2.7188-1.2305-2.7188-2.75 0-1.5196 1.2188-2.75 2.7188-2.75 1.5039 0 2.7226 1.2304 2.7226 2.75Zm2.336 0c0 2.8242-2.2657 5.1094-5.0586 5.1094-2.789 0-5.0547-2.2852-5.0547-5.1094s2.2656-5.1094 5.0547-5.1094c2.793 0 5.0586 2.2852 5.0586 5.1094Zm0 0"
+              />
+            </svg>
+          </div>
+          <p>Select a product</p>
+        </div>
+        <div class="itemwrapper" id="test">
+          <div class="item">
+            <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36">
+              <path
+                style="
+                  stroke: none;
+                  fill-rule: evenodd;
+                  fill: #bdbdbd;
+                  fill-opacity: 1;
+                "
+                d="M30.9453.5a16.7245 16.7245 0 0 0-11.4687 4.5508l-2.0274 1.914a35.9135 35.9135 0 0 0-2.3984 2.4805h-7.836c-.957 0-1.8437.5-2.3359 1.3203L.668 17.7891c-.1952.3242-.2226.7226-.0702 1.0664.1523.3476.4609.5976.828.6758l7.1134 1.496c.0586.0782.125.1485.1992.2188l3.1054 2.914 2.9102 3.1016c.0703.0742.1406.1406.2188.1992l1.496 7.1133c.0782.3672.3282.6758.6758.8281a1.158 1.158 0 0 0 1.0664-.0703l7.0235-4.211a2.7222 2.7222 0 0 0 1.3203-2.3358v-7.836a36.8748 36.8748 0 0 0 2.4844-2.3984l1.9101-2.0274A16.7411 16.7411 0 0 0 35.5 5.0508l-.004-1.8281C35.496 1.7187 34.2774.5 32.7774.5Zm-6.7226 22.3398a39.89 39.89 0 0 1-1.582 1.1172l-5.2813 3.5196 1.0547 5.0156 5.621-3.3711c.1172-.0703.1876-.1992.1876-.336ZM8.5234 18.6406l3.5196-5.2812a34.8776 34.8776 0 0 1 1.1172-1.582H7.2148a.3952.3952 0 0 0-.3359.1913L3.508 17.586ZM21.0781 6.75a14.3862 14.3862 0 0 1 9.8672-3.918h1.832c.211 0 .3868.1758.3868.3907v1.828c0 3.672-1.3985 7.2032-3.9141 9.8712l-1.9102 2.0273a34.7388 34.7388 0 0 1-5.996 5.0664l-5.1133 3.4102-2.711-2.8906c-.0195-.0157-.0351-.0352-.0547-.0508l-2.8906-2.7149 3.4102-5.1172c1.457-2.1796 3.1523-4.1914 5.0625-5.9921Zm5.4766 5.0273c0 1.2891-1.043 2.332-2.332 2.332-1.2891 0-2.332-1.0429-2.332-2.332 0-1.289 1.0429-2.332 2.332-2.332 1.289 0 2.332 1.043 2.332 2.332ZM9.4453 32c1.3985-1.3984 1.3985-4.043 0-5.4453-1.4023-1.3985-4.0469-1.3985-5.4453 0-1.879 1.8828-2.246 6.0703-2.3164 7.3789a.3609.3609 0 0 0 .3828.3828C3.375 34.2461 7.5625 33.879 9.4454 32Zm0 0"
+              />
+            </svg>
+          </div>
+          <p>Reap its benefits</p>
+        </div>
+      </div>
+    </section>
+    <section class="roadmap" id="roadmap">
+      <h1 style="text-align: center">The Amestarter Timeline</h1>
+      <div>
+        <ul>
+          <li class="roadmap-lists">
+            <div>
+              <time>Q2 2022</time>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </li>
+          <li class="roadmap-lists">
+            <div>
+              <time>Q3 2022</time>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </li>
+          <li class="roadmap-lists">
+            <div>
+              <time>Q4 2022</time>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </li>
+          <li class="roadmap-lists">
+            <div>
+              <time>Q1 2023</time>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </li>
+          <li class="roadmap-lists">
+            <div>
+              <time>Q2 2023</time>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </li>
+          <li class="roadmap-lists">
+            <div>
+              <time>Q3 2023</time>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </li>
+          <li class="roadmap-lists">
+            <div>
+              <time>Q4 2023</time>
+              <p>
+                Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed
+                diam nonummy nibh euismod tincidunt ut laoreet dolore magna
+                aliquam erat volutpat. Ut wisi enim ad minim veniam, quis
+                nostrud exerci tation ullamcorper suscipit lobortis nisl ut
+                aliquip ex ea commodo consequat.
+              </p>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+    <div class="headText" id="faq">
+      <h2>Frequently Asked Questions</h2>
+      <div class="container">
+        <div class="wrapper">
+          <button class="toggle">
+            What is Distant Finance?
+            <i class="fas fa-plus icon"></i>
+          </button>
+          <div class="content">
+            <p>
+              Distant Finance is an ecosystem built on the KuCoin Community
+              Chain that bridges the void between NFTs and the metaverse to
+              their application in the real world, making the gateway between
+              the digital and the physical world an imaginary line. <br />
+              We will be the first in line with a slew of products that embodies
+              everything needed in an NFT Ecosystem.
+            </p>
+          </div>
+        </div>
+        <div class="wrapper">
+          <button class="toggle">
+            What products constitute the Distant Finance ecosystem?
+            <i class="fas fa-plus icon"></i>
+          </button>
+          <div class="content">
+            <p>
+              Distant Finance offers a wide range of DeFi and NFT products and
+              sub-products such as: <br />
+              NFT marketplace<br />
+              INO launchpad<br />
+              NFT bridge<br />
+              Lending Pool<br />
+              Game Guild<br />
+              and other DeFi integrated services such as staking to users.
+              <br />
+              Other products are in line for release but mostly will be
+              considered as sub-products
+            </p>
+          </div>
+        </div>
+        <div class="wrapper">
+          <button class="toggle">
+            What is the Distant Finance Incubator program?
+            <i class="fas fa-plus icon"></i>
+          </button>
+          <div class="content">
+            <p>
+              A strategic fundraising program for early-stage NFT related
+              projects that helps develop infant project ideas from the ground
+              up before becoming mainstream projects. <br />Access to the
+              Launchpad and a decentralized community support are part of the
+              benefits a project gets to enjoy on the Distant Launchpad
+            </p>
+          </div>
+        </div>
+        <div class="wrapper">
+          <button class="toggle">
+            Distant Lending (D'Lend)
+            <i class="fas fa-plus icon"></i>
+          </button>
+          <div class="content">
+            <p>
+              Distant Lending allows NFT holders to utilize their NFT in getting
+              instant loans when needed without having to sell their NFT
+              collection. Borrowers can finalize and get funding from lenders in
+              exchange for interest at the end of the loan period.
+            </p>
+          </div>
+        </div>
+        <div class="wrapper">
+          <button class="toggle">
+            What is the $VOID token and its utilities?
+            <i class="fas fa-plus icon"></i>
+          </button>
+          <div class="content">
+            <p>
+              $VOID is a KRC-20 token, the native token of the Distant Finance
+              ecosystem that allows holders to stake, access launchpad features,
+              and governance voting. It is the fuel behind our ecosystem that
+              offers a wide range of benefits to the holders from the use of the
+              products released on the Distant Ecosystem.
+            </p>
+          </div>
+        </div>
+        <div class="wrapper">
+          <button class="toggle">
+            What is the Distant Finance DAO?
+            <i class="fas fa-plus icon"></i>
+          </button>
+          <div class="content">
+            <p>
+              The Distant DAO is our path to full decentralization. Starting off
+              with the Quango, our semi decentralized structure, we will
+              collectively build the ecosystem before going into full
+              decentralization <br />
+              The community will be allowed to decide on how Distant Finance
+              should operate. Every decision-making will have to go through the
+              DAO before seeing they are implemented on the platform.
+            </p>
+          </div>
+        </div>
+        <div class="wrapper">
+          <button class="toggle">
+            When is the official launch
+            <i class="fas fa-plus icon"></i>
+          </button>
+          <div class="content">
+            <p>
+              The launch for the ecosystem was slated for July. <br />Our first
+              product will be the NFT marketplace with beta phases for complex
+              systems of all our products <br />
+            </p>
+          </div>
+        </div>
+        <div class="doc">
+          <a href="https://docs.amestarter.com" target="_blank" class="docs">
+            Whitepaper
+          </a>
         </div>
       </div>
     </div>
-  </div>
 
-  <div id="community" class="services section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading  wow fadeInDown" data-wow-duration="1s" data-wow-delay="0.5s">
-            <h4>For the<em> Community</em></h4>
-            <img src="assets/images/heading-line-dec.png" alt="--" title="heading-line">
-            <p>Gain first mover advantages and early access to new initiatives built on a sophisticated Quantum resistant chain.</p>
+    <footer>
+      <div class="footer">
+        <div class="project">
+          <h4>Amestarter</h4>
+          <p>
+            Your unlimited access card to a Web3.0 ecosystem of infinite
+            possibilities built for the Blockchain.
+          </p>
+          <div class="icon-social" style="display: flex">
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  fill="#2F88FF"
+                  stroke="#000"
+                  stroke-linejoin="round"
+                  stroke-width="4"
+                  d="M5 35.7622C6.92886 36.8286 20.8914 44.8773 30.8199 38.674C40.7483 32.4707 40.2006 21.7833 40.2006 16.886C41.1 15.0018 43 14.0439 43 8.9438C41.1337 10.6678 39.2787 11.2544 37.435 10.7036C35.6287 7.94957 33.1435 6.73147 29.9794 7.04934C25.2333 7.52614 23.4969 12.1825 24.0079 18.2067C16.6899 21.9074 10.9515 15.524 7.99418 10.7036C7.00607 14.4999 6.0533 19.0576 7.99418 24.0995C9.2881 27.4607 12.3985 30.3024 17.3254 32.6246C12.3323 35.3308 8.22382 36.3766 5 35.7622Z"
+                />
+              </svg>
+            </p>
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 256 256"
+              >
+                <defs>
+                  <linearGradient
+                    id="svgIDa"
+                    x1="50%"
+                    x2="50%"
+                    y1="0%"
+                    y2="100%"
+                  >
+                    <stop offset="0%" stop-color="#2AABEE" />
+                    <stop offset="100%" stop-color="#229ED9" />
+                  </linearGradient>
+                </defs>
+                <path
+                  fill="url(#svgIDa)"
+                  d="M128 0C94.06 0 61.48 13.494 37.5 37.49A128.038 128.038 0 0 0 0 128c0 33.934 13.5 66.514 37.5 90.51C61.48 242.506 94.06 256 128 256s66.52-13.494 90.5-37.49c24-23.996 37.5-56.576 37.5-90.51c0-33.934-13.5-66.514-37.5-90.51C194.52 13.494 161.94 0 128 0Z"
+                />
+                <path
+                  fill="#FFF"
+                  d="M57.94 126.648c37.32-16.256 62.2-26.974 74.64-32.152c35.56-14.786 42.94-17.354 47.76-17.441c1.06-.017 3.42.245 4.96 1.49c1.28 1.05 1.64 2.47 1.82 3.467c.16.996.38 3.266.2 5.038c-1.92 20.24-10.26 69.356-14.5 92.026c-1.78 9.592-5.32 12.808-8.74 13.122c-7.44.684-13.08-4.912-20.28-9.63c-11.26-7.386-17.62-11.982-28.56-19.188c-12.64-8.328-4.44-12.906 2.76-20.386c1.88-1.958 34.64-31.748 35.26-34.45c.08-.338.16-1.598-.6-2.262c-.74-.666-1.84-.438-2.64-.258c-1.14.256-19.12 12.152-54 35.686c-5.1 3.508-9.72 5.218-13.88 5.128c-4.56-.098-13.36-2.584-19.9-4.708c-8-2.606-14.38-3.984-13.82-8.41c.28-2.304 3.46-4.662 9.52-7.072Z"
+                />
+              </svg>
+            </p>
+            <p>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                preserveAspectRatio="xMidYMid meet"
+                viewBox="0 0 48 48"
+              >
+                <path
+                  fill="none"
+                  stroke="#1b0594"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  d="M5.5 40.5a2 2 0 0 0 2 2h33a2 2 0 0 0 2-2m0-33a2 2 0 0 0-2-2h-33a2 2 0 0 0-2 2"
+                />
+                <circle
+                  cx="15.329"
+                  cy="24"
+                  r="9.068"
+                  fill="none"
+                  stroke="#1b0594"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <ellipse
+                  cx="31.198"
+                  cy="24"
+                  fill="none"
+                  stroke="#1b0594"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  rx="4.269"
+                  ry="9.068"
+                />
+                <ellipse
+                  cx="39.869"
+                  cy="24"
+                  fill="none"
+                  stroke="#1b0594"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  rx="1.87"
+                  ry="9.068"
+                />
+              </svg>
+            </p>
           </div>
         </div>
+        <aside>
+          <div class="company">
+            <h5>Company</h5>
+            <p>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                About Us
+              </a>
+            </p>
+            <p>
+              <a
+                href="https://docs.amestarter.com/products"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Services
+              </a>
+            </p>
+            <p>
+              <a href="#" target="_blank" rel="noopener noreferrer">
+                Portfolio
+              </a>
+            </p>
+          </div>
+          <div class="socials">
+            <h5>Contact</h5>
+            <p>
+              <a
+                href="https://forms.gle/Xp7BMev8qCko5aMU7"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Apply for Listing
+              </a>
+            </p>
+            <p>
+              <a
+                href="mailto:support@amestarter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Support
+              </a>
+            </p>
+            <p>
+              <a
+                href="mailto:business@amestarter.com"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Partnerships
+              </a>
+            </p>
+          </div>
+        </aside>
       </div>
-    </div>
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="service-item first-service">
-            <div class="icon"></div>
-            <h4>Total Decentralization</h4>
-            <p>Decision making processes handled by the community via open votes in order to ensure a true 100% Decentralization</p>
-            <div class="text-button">
-              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="service-item second-service">
-            <div class="icon"></div>
-            <h4>Filter Selection</h4>
-            <p>Predetermined criterias to obfuscate the probabilities for malicious developers in order to protect the Community</p>
-            <div class="text-button">
-              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="service-item third-service">
-            <div class="icon"></div>
-            <h4>Multi-Tier Flow</h4>
-            <p>Tiered system that fits into the system to allocate for everyone an allocation in the ideas of tomorrow</p>
-            <div class="text-button">
-              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="service-item fourth-service">
-            <div class="icon"></div>
-            <h4>24/7 Help &amp; Support</h4>
-            <p>Community support materials and interaction to help onboard new users to AmeChain and AmeStarter</p>
-            <div class="text-button">
-              <a href="#">Read More <i class="fa fa-arrow-right"></i></a>
-            </div>
-          </div>
-        </div>
+
+      <div class="footer2">
+        <p>Copyright &copy; 2022 Amestarter</p>
       </div>
-    </div>
-  </div>
+    </footer>
 
-  <div id="developers" class="about-us section">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-6 align-self-center">
-          <div class="section-heading">
-            <h4>For <em>Developers</em></h4>
-            <img src="assets/images/heading-line-dec.png" alt="----" title="heading-line">
-            <p>Tap into Amechain's liquidity and community to bring your project and ideas to reality.</p>
-          </div>
-          <div class="row">
-            <div class="col-lg-6">
-              <div class="box-item">
-                <h4><a href="#">Fragmented Liquidity</a></h4>
-                <p>Get access to funding to kickstart your idea</p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="box-item">
-                <h4><a href="#">AmeStarter Services</a></h4>
-                <p>Access to tools and personnel before &amp; after launch</p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="box-item">
-                <h4><a href="#">Incubation Resources</a></h4>
-                <p>First time? Let's work on improving the concept</p>
-              </div>
-            </div>
-            <div class="col-lg-6">
-              <div class="box-item">
-                <h4><a href="#">Community Exposure</a></h4>
-                <p>Gain exposure to AmeChain's &amp; AmeStarter large fan base</p>
-              </div>
-            </div>
-            <div class="col-lg-12">
-              <p>There is always a vetting process to be conducted by the team and elected council acting as the Quango before selection and further talks will be initiated <br> Do well to fill out the details completely and precisely</p>
-              <div class="animated-border-button">
-                <a href="https://forms.gle/Xp7BMev8qCko5aMU7" target="_blank">Click to Apply</a>
-              </div> <br>
-              <span>*Communication takes less than 3 days</span>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-6">
-          <div class="right-image">
-            <img src="assets/images/about-right-dec.png" alt="Development" title="developers support">
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-
-  <footer id="footer">
-    <div class="container">
-      <div class="row">
-        <div class="col-lg-8 offset-lg-2">
-          <div class="section-heading">
-            <h4>Join our Vibrant communities to stay in the loop on new &amp; upcoming launches</h4>
-          </div>
-        </div>
-        <!-- Partners and Team info to be updated in real time very soon! -->
-      <div class="row">
-        <div class="col-lg-3">
-          <div class="footer-widget">
-            <h4>Socials and all</h4>
-            <p><a href="https://twitter.com/amestarter" target="_blank" class="fab fa-twitter"> Twitter</a></p>
-            <p><a href="https://github.com/Amestarter/" target="_blank" class="fab fa-github"> Github</a></p>
-            <p><a href="https://t.me/amestarter" target="_blank" class="fab fa-telegram"> Telegram</a></p>
-            <p><a href="https://medium.com/@amestarter" target="_blank" class="fab fa-medium"> Medium</a></p>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="footer-widget">
-            <h4>Contact Us</h4>
-            <ul>
-              <li> <a href="mailto:business@amestarter.com" target="_blank">Business Enquiries?</a></li>
-              <li><a href="mailto:business@amestarter.com" target="_blank"> Business Link</a></li>
-              <li> <a href="mailto:support@amestarter.com" target="_blank">Queries, Complaints?</a></li>
-              <li><a href="mailto:support@amestarter.com" target="_blank"> Support Line</a></li>
-            </ul>
-            
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="footer-widget">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><a href="#">Launchpad</a></li>
-              <li><a href="https://docs.amestarter.com" target="_blank">Whitepaper</a></li>
-              <li><a href="#">Roadmap</a></li>
-            </ul>
-            <ul>
-              <li><a href="#">Team Profile</a></li>
-              <li><a href="#">Development</a></li>
-              <li><a href="#">CoinmarketCap</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-lg-3">
-          <div class="footer-widget">
-            <h4>About the Project</h4>
-            <div class="logo">
-              <img src="assets/images/logo.png" width="80" height="80" title="bottom_logo" alt="AmeStarter logo">
-            </div>
-            <p>...the first decentralized cryptocurrency launchpad on the Amechain Quantum resistant network</p>
-          </div>
-        </div>
-        <div class="col-lg-12">
-          <div class="copyright-text">
-            <p>Building a true Web3.0 on AmeChain</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-
-  <!-- Scripts -->
-  <script src="vendor/jquery/jquery.min.js"></script>
-  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/owl-carousel.js"></script>
-  <script src="assets/js/animation.js"></script>
-  <script src="assets/js/imagesloaded.js"></script>
-  <script src="assets/js/popup.js"></script>
-  <script src="assets/js/custom.js"></script>
-</body>
+    <script src="script.js"></script>
+    <script src="roadmap.js"></script>
+    <script src="menu.js"></script>
+    <script src="faq.js"></script>
+  </body>
 </html>

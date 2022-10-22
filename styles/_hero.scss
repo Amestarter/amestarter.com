@@ -35,10 +35,12 @@
     .infobox-slimtext {
       font-size: clamp(1.45rem, 1.85rem, 1.9vw);
       font-weight: 400;
+      margin: 20px 0;
     }
     .explorebtn,
     .createbtn {
-      margin:1.3rem;
+      margin: 1.3rem;
+      margin-left: 0;
       margin-right: 1rem;
       padding: 0.5rem;
       background-color: transparent;

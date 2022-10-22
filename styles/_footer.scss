@@ -11,9 +11,6 @@ footer {
     .project {
       flex: 1.5;
       width: 80%;
-      @media (max-width: 470px) {
-        order: 3;
-      }
       h4 {
         font-weight: 600;
         font-size: clamp(1.5rem, 2rem, 2vw);
@@ -24,31 +21,50 @@ footer {
         font-weight: 300;
         margin: 0.2rem 0;
         letter-spacing: 1px;
+        font-family: "Lato", sans-serif;
       }
       div {
         display: flex;
         justify-content: flex-start;
         align-items: center;
         gap: 1rem;
+        a {
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            transform: scale(1.1);
+          }
+        }
       }
     }
-    .company,
-    .socials {
-      flex: 1;
-      width: 100%;
+    aside {
+      flex: 2;
       display: flex;
       justify-content: center;
       align-items: center;
-      flex-direction: column;
-      h5 {
-        font-size: clamp(1.35rem, 1.7rem, 1.75vw);
-        font-weight: 400;
-        margin: 0.4rem 0;
-      }
-      p {
-        font-size: clamp(1rem, 1.5rem, 1.5vw);
-        font-weight: 300;
-        margin: 0.3rem 0;
+      width: 100%;
+      .company,
+      .socials {
+        flex: 1;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        h5 {
+          font-size: clamp(1.35rem, 1.7rem, 1.75vw);
+          font-weight: 400;
+          margin: 0.4rem 0;
+        }
+        p {
+          font-size: clamp(1rem, 1.5rem, 1.5vw);
+          font-weight: 300;
+          margin: 0.3rem 0;
+          transition: all 0.3s ease-in-out;
+          &:hover {
+            transform: scale(1.03);
+            transform: translateY(-1px);
+          }
+        }
       }
     }
 
@@ -62,6 +78,7 @@ footer {
       text-align: center;
       margin: 0;
       padding: 1rem 0;
+      font-family: "Shalimar", cursive;
     }
   }
 }
