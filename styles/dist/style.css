@@ -33,6 +33,18 @@ a {
   transition: width 1s ease-in-out;
 }
 
+.grid-item {
+  transform: translateY(200px) !important;
+  opacity: 0;
+  transition: all 1s ease;
+}
+
+.inView {
+  opacity: 1 !important;
+  -webkit-transform: translateY(0px) rotate(0deg) translateZ(0);
+  transform: translateY(0px) rotate(0deg) translateZ(0) !important;
+}
+
 ul {
   list-style: none;
 }
@@ -149,7 +161,7 @@ ul {
   backdrop-filter: blur(5px);
   overflow: hidden;
   z-index: 20;
-  transition: all 0.5s ease-in-out;
+  transition: width 1s ease-in-out;
 }
 .mobileNav .closeNav {
   position: absolute;
@@ -267,7 +279,7 @@ ul {
 .grid-row {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 350px));
-  grid-gap: 15px 15px;
+  grid-gap: 35px 35px;
   justify-content: center;
   align-items: baseline;
 }
@@ -288,8 +300,9 @@ ul {
   margin-bottom: 0;
 }
 
-.grid-row .grid-item {
-  filter: contrast(0.7);
+.grid-row .grid-item:hover {
+  transform: translateY(-20px);
+  transition: transform 0.6s ease;
 }
 
 .grid-row .grid-item {
@@ -299,6 +312,12 @@ ul {
   cursor: pointer;
   margin: auto;
   background: linear-gradient(45deg, rgba(28, 28, 32, 0.418), rgba(32, 31, 32, 0.418));
+  -webkit-transition-delay: 0.3s;
+  -o-transition-delay: 0.3s;
+  transition-delay: 0.3s;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 2s;
   color: white;
   text-align: center;
   font-family: sans-serif;
