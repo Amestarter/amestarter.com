@@ -1,9 +1,15 @@
 .container-time {
   min-height: 100vh;
   width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   background-color: #101010;
   padding: 100px 0;
 }
@@ -20,9 +26,15 @@
   font-size: 30px;
   letter-spacing: 5px;
   margin: 50px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .timeline ul {
@@ -73,7 +85,8 @@
     height: 100%;
     width: 1px;
     left: 50%;
-    transform: translate(-50%);
+    -webkit-transform: translate(-50%);
+            transform: translate(-50%);
     background-color: white;
   }
   .timeline ul li {
@@ -84,19 +97,24 @@
   .timeline ul li:nth-child(odd) {
     float: left;
     clear: right;
-    transform: translateX(-30px);
+    -webkit-transform: translateX(-30px);
+            transform: translateX(-30px);
     border-radius: 20px 0px 20px 20px;
+    -webkit-transition: background-color 0.5s ease-out;
     transition: background-color 0.5s ease-out;
   }
   .timeline ul li:nth-child(odd):hover {
     background-color: rgb(138, 21, 161);
+    -webkit-transition: 1s;
     transition: 1s;
   }
   .timeline ul li:nth-child(even) {
     float: right;
     clear: left;
-    transform: translateX(30px);
+    -webkit-transform: translateX(30px);
+            transform: translateX(30px);
     border-radius: 0px 20px 20px 20px;
+    -webkit-transition: background-color 0.5s ease-out;
     transition: background-color 0.5s ease-out;
   }
   .timeline ul li:nth-child(even):hover {
@@ -113,11 +131,13 @@
   }
   .timeline ul li:nth-child(odd)::after {
     right: -30px;
-    transform: translate(50%, -50%);
+    -webkit-transform: translate(50%, -50%);
+            transform: translate(50%, -50%);
   }
   .timeline ul li:nth-child(even)::after {
     left: -30px;
-    transform: translate(-50%, 50%);
+    -webkit-transform: translate(-50%, 50%);
+            transform: translate(-50%, 50%);
   }
   .timeline ul li:hover::after {
     background-color: aqua;

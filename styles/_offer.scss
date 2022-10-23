@@ -8,7 +8,7 @@
 .grid-row {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 350px));
-  grid-gap: 15px 15px;
+  grid-gap: 35px 35px;
   justify-content: center;
   align-items: baseline;
 }
@@ -26,8 +26,10 @@
   font-size: 20px;
   margin-bottom: 0;
 }
-.grid-row .grid-item{
-  filter: contrast(0.7);
+.grid-row .grid-item:hover{
+  // filter: contrast(0.7);
+  transform: translateY(-20px);
+  transition: transform 0.6s ease;
 }
 .grid-row .grid-item {
   transition: filter 0.5s ease;

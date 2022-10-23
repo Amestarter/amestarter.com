@@ -28,7 +28,8 @@ a {
 }
 .is-open {
   display: block !important;
-  transition: all 0.5s ease-in-out;
+  width:100vw !important;
+  transition: width 1s ease-in-out;
 }
 ul {
   list-style: none;

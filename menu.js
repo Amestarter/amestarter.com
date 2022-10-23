@@ -4,16 +4,16 @@ const burger = document.querySelector("#burger"),
 a = document.querySelectorAll(".nav-lists");
 burger.addEventListener("click", function (e) {
   mobileNav.classList.toggle("is-open");
-  document.body.classList.toggle("stop-scrolling");
+  // document.body.classList.toggle("stop-scrolling");
 });
 hamburger.addEventListener("click", (e) => {
   mobileNav.classList.toggle("is-open");
-  document.body.classList.toggle("stop-scrolling");
+  // document.body.classList.toggle("stop-scrolling");
 });
 
 a.forEach((el) =>
   el.addEventListener("click", function (e) {
     mobileNav.classList.toggle("is-open");
-    document.body.classList.remove("stop-scrolling");
+    // document.body.classList.remove("stop-scrolling");
   })
 );
