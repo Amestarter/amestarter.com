@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Shalimar&display=swap");
 body {
   margin: 0;
   padding: 0;
-  background-color: #252954;
+  background-color: #151515;
   overflow-x: hidden;
   position: relative;
   color: #fff;
@@ -29,6 +29,8 @@ a {
 
 .is-open {
   display: block !important;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 ul {
@@ -81,6 +83,11 @@ ul {
   text-align: center;
   padding: 0 5%;
 }
+.navbar .logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
 .navbar .navLinks {
   display: none;
 }
@@ -103,13 +110,25 @@ ul {
 }
 .navbar .launchApp {
   padding: 0 5%;
-  cursor: pointer;
   display: none;
 }
 .navbar .launchApp span {
   border: 1px solid #fff;
   padding: 0.5rem;
   border-radius: 6px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+.navbar .launchApp span a {
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+.navbar .launchApp span:hover {
+  border: 1px solid #252954;
+}
+.navbar .launchApp span:hover a {
+  color: aqua;
 }
 @media (min-width: 600px) {
   .navbar .launchApp {
@@ -128,10 +147,12 @@ ul {
           align-items: center;
   width: 50px;
   height: 50px;
-  cursor: pointer;
   -webkit-transition: all 0.7s ease;
   transition: all 0.7s ease;
   z-index: 9;
+}
+.navbar .hamburger svg {
+  cursor: pointer;
 }
 @media (min-width: 600px) {
   .navbar .hamburger {
@@ -153,12 +174,17 @@ ul {
   overflow: hidden;
   display: none;
   z-index: 20;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 .mobileNav .closeNav {
   position: absolute;
   top: 3%;
   right: 3%;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
   z-index: 10;
+  cursor: pointer;
 }
 .mobileNav .main-nav {
   display: -webkit-box;
@@ -167,6 +193,7 @@ ul {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -191,8 +218,12 @@ ul {
 }
 .mobileNav .main-nav ul li {
   font-size: clamp(1.35rem, 1.8rem, 1.8vw);
+  letter-spacing: 0.02rem;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+}
+.mobileNav .main-nav ul li a {
+  color: black;
 }
 .mobileNav .main-nav ul li:hover {
   -webkit-transform: translateY(-5px);
@@ -205,6 +236,7 @@ ul {
   background-position: center;
   background-repeat: no-repeat;
   position: relative;
+  filter: grayscale(100%);
 }
 .hero .container {
   display: -webkit-box;
@@ -254,10 +286,12 @@ ul {
 .hero .container .infobox-slimtext {
   font-size: clamp(1.45rem, 1.85rem, 1.9vw);
   font-weight: 400;
+  margin: 20px 0;
 }
 .hero .container .explorebtn,
 .hero .container .createbtn {
   margin: 1.3rem;
+  margin-left: 0;
   margin-right: 1rem;
   padding: 0.5rem;
   background-color: transparent;
@@ -284,7 +318,7 @@ ul {
 }
 
 .section {
-  padding: 70px 30px;
+  padding: 0 5vw;
 }
 
 .container-products {
@@ -309,10 +343,10 @@ ul {
   /*   line-height: 1; */
 }
 
-h3 {
+.offers h3 {
   text-align: center;
-  font-size: clamp(3rem, 3.5rem, 3vw);
-  margin: 40px;
+  font-size: clamp(2rem, 2.5rem, 3vw);
+  margin: 20px;
 }
 
 .grid-row .grid-item h3 {
@@ -320,7 +354,7 @@ h3 {
   margin-bottom: 0;
 }
 
-.grid-row .grid-item:hover {
+.grid-row .grid-item {
   -webkit-filter: contrast(0.7);
           filter: contrast(0.7);
 }
@@ -336,7 +370,7 @@ h3 {
   height: 400px;
   cursor: pointer;
   margin: auto;
-  background: linear-gradient(45deg, rgba(17, 17, 139, 0.418), rgba(233, 8, 184, 0.418));
+  background: linear-gradient(45deg, rgba(28, 28, 32, 0.418), rgba(32, 31, 32, 0.418));
   color: black;
   text-align: center;
   font-family: sans-serif;
@@ -385,9 +419,10 @@ a {
       -ms-flex-align: center;
           align-items: center;
   gap: 1rem;
+  margin: 0.65rem 0;
 }
 .started .items .itemwrapper {
-  width: 200px;
+  width: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -663,26 +698,34 @@ ul .roadmap-lists.show div {
     background-color: aqua;
   }
 }
-.grid {
-  padding-top: 15%;
+.headText {
+  padding: 0 5vw;
 }
-
-@media (min-width: 720px) {
-  .grid {
-    padding-top: 10%;
-  }
+.headText .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 50px;
 }
-.container {
-  margin-left: 15vw;
-  margin-right: 15vw;
-  margin-top: 5vh;
-}
-
-.wrapper {
-  margin-bottom: 10px;
+.headText .container .wrapper {
+  width: min(100%, 500px);
   padding: 7px 20px;
   border-radius: 5px;
   border: 0.5px solid rebeccapurple;
+}
+.headText .container .wrapper .toggle {
+  font-size: clamp(1.1rem, 1.2vw, 1.32rem);
 }
 
 .img {
@@ -714,6 +757,7 @@ ul .roadmap-lists.show div {
   outline: none;
   cursor: pointer;
   padding: 5px 0;
+  gap: 10px;
 }
 
 .content {
@@ -781,7 +825,7 @@ footer .container h2 {
 }
 
 @media only screen and (max-width: 410px) {
-  .toggle {
+  .toggle i {
     font-size: 12px;
   }
   .content {
@@ -841,13 +885,6 @@ footer .footer .project {
           flex: 1.5;
   width: 80%;
 }
-@media (max-width: 470px) {
-  footer .footer .project {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-}
 footer .footer .project h4 {
   font-weight: 600;
   font-size: clamp(1.5rem, 2rem, 2vw);
@@ -858,6 +895,7 @@ footer .footer .project p {
   font-weight: 300;
   margin: 0.2rem 0;
   letter-spacing: 1px;
+  font-family: "Lato", sans-serif;
 }
 footer .footer .project div {
   display: -webkit-box;
@@ -871,8 +909,31 @@ footer .footer .project div {
           align-items: center;
   gap: 1rem;
 }
-footer .footer .company,
-footer .footer .socials {
+footer .footer .project div a {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+footer .footer .project div a:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+footer .footer aside {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+footer .footer aside .company,
+footer .footer aside .socials {
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -891,17 +952,26 @@ footer .footer .socials {
       -ms-flex-direction: column;
           flex-direction: column;
 }
-footer .footer .company h5,
-footer .footer .socials h5 {
+footer .footer aside .company h5,
+footer .footer aside .socials h5 {
   font-size: clamp(1.35rem, 1.7rem, 1.75vw);
   font-weight: 400;
   margin: 0.4rem 0;
 }
-footer .footer .company p,
-footer .footer .socials p {
+footer .footer aside .company p,
+footer .footer aside .socials p {
   font-size: clamp(1rem, 1.5rem, 1.5vw);
   font-weight: 300;
   margin: 0.3rem 0;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+footer .footer aside .company p:hover,
+footer .footer aside .socials p:hover {
+  -webkit-transform: scale(1.03);
+          transform: scale(1.03);
+  -webkit-transform: translateY(-1px);
+          transform: translateY(-1px);
 }
 @media (min-width: 470px) {
   footer .footer {
@@ -916,4 +986,5 @@ footer .footer2 p {
   text-align: center;
   margin: 0;
   padding: 1rem 0;
+  font-family: "Shalimar", cursive;
 }/*# sourceMappingURL=style.css.map */
