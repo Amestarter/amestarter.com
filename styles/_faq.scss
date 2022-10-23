@@ -11,7 +11,7 @@
       width: min(100%, 500px);
       padding: 7px 20px;
       border-radius: 5px;
-      border: 0.5px solid rebeccapurple;
+      border: 0.5px solid #0c2a30;
       .toggle {
         font-size: clamp(1.1rem, 1.2vw, 1.32rem);
       }
@@ -35,7 +35,7 @@
   align-items: center;
   justify-content: space-between;
   font-size: 16px;
-  color: #020211;
+  color: gray;
   font-weight: 500;
   border: none;
   outline: none;
@@ -48,7 +48,7 @@
   text-align: justify;
   line-height: 1.7;
   height: 0;
-  color: black;
+  color: #fff;
   overflow: hidden;
   transition: all 1s;
   backdrop-filter: blur(5px);
@@ -78,12 +78,13 @@ h2 {
   text-align: center;
   color: #dde5ec !important;
   font-size: 20px;
-  transition: color 500ms ease-in-out;
+  transition: all 300ms ease-in-out;
+  &:hover {
+    color: #000 !important;
+    background-color: #dde5ec;
+  }
 }
 
-.docs:hover {
-  color: blue;
-}
 .stop-scrolling {
   height: 100vh;
   overflow: hidden;
