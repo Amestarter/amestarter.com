@@ -17,15 +17,7 @@ a.forEach(function (el) {
     mobileNav.classList.toggle("is-open");
     document.body.classList.remove("stop-scrolling");
   });
-}); // const card = document.querySelectorAll('.grid-item');
-// window.onscroll = () => {
-//     if (window.scrollY > 300){
-//         card.classList.add('inView');
-//     }
-//     else{
-//         card.classList.remove('inView');
-//     }
-// };
+}); // const card = document.querySelectorAll('.grid-item'),
 
 var elementsArray = document.querySelectorAll(".grid-item");
 console.log(elementsArray);
@@ -45,3 +37,39 @@ function fadeIn() {
 }
 
 fadeIn();
+var elementsArrayOne = document.querySelectorAll(".itemwrapper");
+console.log(elementsArrayOne);
+window.addEventListener('scroll', fadeOut);
+
+function fadeOut() {
+  for (var i = 0; i < elementsArrayOne.length; i++) {
+    var elemOne = elementsArrayOne[i];
+    var distInViewAgain = elemOne.getBoundingClientRect().top - window.innerHeight + 20;
+
+    if (distInViewAgain < 0) {
+      elemOne.classList.add("inView");
+    } else {
+      elemOne.classList.remove("inView");
+    }
+  }
+}
+
+fadeOut();
+var elementsArrayOneTwo = document.querySelectorAll(".wrapper");
+console.log(elementsArrayOneTwo);
+window.addEventListener('scroll', fadeOutIn);
+
+function fadeOutIn() {
+  for (var i = 0; i < elementsArrayOneTwo.length; i++) {
+    var elemOneTwo = elementsArrayOneTwo[i];
+    var distInViewAgainAdd = elemOneTwo.getBoundingClientRect().top - window.innerHeight + 20;
+
+    if (distInViewAgainAdd < 0) {
+      elemOneTwo.classList.add("inView");
+    } else {
+      elemOneTwo.classList.remove("inView");
+    }
+  }
+}
+
+fadeOutIn();

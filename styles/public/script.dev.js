@@ -31,18 +31,23 @@ var _loop = function _loop(i) {
 
 for (var i = 0; i < toggles.length; i++) {
   _loop(i);
-} // let elementsArray = document.querySelectorAll(".grid-item"); 
-// console.log(elementsArray); 
-// window.addEventListener('scroll', fadeIn );  
-// function fadeIn() { 
-//     for (var i = 0; i < elementsArray.length; i++) { 
-//         var elem = elementsArray[i] 
-//         var distInView = elem.getBoundingClientRect().top - window.innerHeight + 20; 
-//         if (distInView < 0) { 
-//             elem.classList.add("inView"); 
-//         } else { 
-//             elem.classList.remove("inView"); 
-//         } 
-//     } 
-// } 
-// fadeIn();
+}
+
+var elementsArrayOne = document.querySelectorAll(".itemwrapper");
+console.log(elementsArrayOne);
+window.addEventListener('scroll', fadeOut);
+
+function fadeOut() {
+  for (var i = 0; i < elementsArrayOne.length; i++) {
+    var elemOne = elementsArrayOne[i];
+    var distInViewAgain = elemOne.getBoundingClientRect().top - window.innerHeight + 20;
+
+    if (distInViewAgain < 0) {
+      elemOne.classList.add("inView");
+    } else {
+      elemOne.classList.remove("inView");
+    }
+  }
+}
+
+fadeOut();

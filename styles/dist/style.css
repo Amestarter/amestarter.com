@@ -35,10 +35,31 @@ a {
 
 .grid-item {
   transform: translateY(200px) !important;
+  opacity: 0 !important;
+  transition: all 1s ease;
+}
+
+.itemwrapper {
+  transform: translateY(200px) !important;
   opacity: 0;
   transition: all 1s ease;
 }
 
+.wrapper {
+  transform: translateY(200px) !important;
+  opacity: 0 !important;
+  transition: all 1s ease;
+}
+
+.heroContent, .display {
+  animation: slideIn 2s 1 forwards;
+}
+
+@keyframes slideIn {
+  100% {
+    transform: translateX(0%);
+  }
+}
 .inView {
   opacity: 1 !important;
   -webkit-transform: translateY(0px) rotate(0deg) translateZ(0);
@@ -223,6 +244,9 @@ ul {
     flex-direction: row;
   }
 }
+.hero .container .heroContent {
+  transform: translateX(-100%);
+}
 .hero .container .heroContent,
 .hero .container .display {
   flex: 1;
@@ -261,6 +285,9 @@ ul {
 .hero .container .explorebtn:hover a,
 .hero .container .createbtn:hover a {
   color: #252954;
+}
+.hero .container .display {
+  transform: translateX(100%);
 }
 .hero .container .display .displayImg {
   width: 100%;
