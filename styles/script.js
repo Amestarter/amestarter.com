@@ -27,3 +27,22 @@ for(let i=0; i<toggles.length; i++){
         }
     });
 }
+
+
+
+
+let elementsArrayOne = document.querySelectorAll(".itemwrapper"); 
+console.log(elementsArrayOne); 
+window.addEventListener('scroll', fadeOut );  
+function fadeOut() { 
+    for (var i = 0; i < elementsArrayOne.length; i++) { 
+        var elemOne = elementsArrayOne[i] 
+        var distInViewAgain = elemOne.getBoundingClientRect().top - window.innerHeight + 20; 
+        if (distInViewAgain < 0) { 
+            elemOne.classList.add("inView"); 
+        } else { 
+            elemOne.classList.remove("inView"); 
+        } 
+    } 
+} 
+fadeOut();

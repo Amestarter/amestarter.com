@@ -42,6 +42,12 @@
     rgba(28, 28, 32, 0.418),
     rgba(32, 31, 32, 0.418)
   );
+  -webkit-transition-delay: .3s; 
+  -o-transition-delay: .3s; 
+  transition-delay: .3s; 
+  -webkit-transition: .4s; 
+  -o-transition: .4s; 
+  transition: 2s ; 
   // box-shadow: var(--shadow);
   // color: var(--dark);
   color: white;
@@ -60,3 +66,4 @@ a {
   margin-top: 10px;
   border-radius: 100%;
 }
+

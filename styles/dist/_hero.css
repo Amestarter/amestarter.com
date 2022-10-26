@@ -23,6 +23,9 @@
     flex-direction: row;
   }
 }
+.hero .container .heroContent {
+  transform: translateX(-100%);
+}
 .hero .container .heroContent,
 .hero .container .display {
   flex: 1;
@@ -37,10 +40,12 @@
 .hero .container .infobox-slimtext {
   font-size: clamp(1.45rem, 1.85rem, 1.9vw);
   font-weight: 400;
+  margin: 20px 0;
 }
 .hero .container .explorebtn,
 .hero .container .createbtn {
   margin: 1.3rem;
+  margin-left: 0;
   margin-right: 1rem;
   padding: 0.5rem;
   background-color: transparent;
@@ -59,6 +64,9 @@
 .hero .container .explorebtn:hover a,
 .hero .container .createbtn:hover a {
   color: #252954;
+}
+.hero .container .display {
+  transform: translateX(100%);
 }
 .hero .container .display .displayImg {
   width: 100%;
