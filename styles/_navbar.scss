@@ -1,5 +1,7 @@
 .navbar {
   display: flex;
+  position: fixed;
+  z-index: 40;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -23,6 +25,45 @@
     }
     .navlink {
       font-size: clamp(1.35rem, 1.8rem, 1.8vw);
+      a{
+        position:relative;
+        text-decoration: none;
+      }
+      a:link{
+    color: white;
+    // padding: .25em;
+    
+}
+a:visited{
+  color:white;
+}
+/* Hover State */
+
+a::after{
+  content:"";
+  position:absolute;
+  inset: 80% 0 0 0%;
+  height:4px;
+  width:0%;
+  margin-top:10px;
+  transition: all .5s ease;
+  background:red;
+}
+a:hover::after{
+  // inset: 80% 0 0 100%;
+  width:100%;
+  transition: all .2s ease;
+}
+/* Focus State*/
+
+a:focus::after{
+  // inset: 80% 0 0 100%;
+  width:100%;
+}
+/* Active State
+*/
+
+
     }
   }
   .launchApp {
@@ -76,7 +117,7 @@
   backdrop-filter: blur(5px);
   overflow: hidden;
   // display: none;
-  z-index: 20;
+  z-index: 41;
   transition: width 1s ease-in-out;
   .closeNav {
     position: absolute;
@@ -106,6 +147,37 @@
         a {
           color: black;
         }
+        a:link{
+          color: white;
+          // padding: .25em;
+          
+      }
+      a:visited{
+        color:purple ;
+      }
+      /* Hover State */
+      
+      a::after{
+        content:"";
+        position:absolute;
+        inset: 80% 0 0 0%;
+        height:4px;
+        width:0%;
+        margin-top:10px;
+        transition: all .5s ease;
+        background:red;
+      }
+      a:hover::after{
+        // inset: 80% 0 0 100%;
+        width:100%;
+        transition: all .2s ease;
+      }
+      /* Focus State*/
+      
+      a:focus::after{
+        // inset: 80% 0 0 100%;
+        width:100%;
+      }
         &:hover {
           transform: translateY(-5px);
         }

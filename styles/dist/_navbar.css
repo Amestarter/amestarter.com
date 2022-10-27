@@ -1,5 +1,7 @@
 .navbar {
   display: flex;
+  position: fixed;
+  z-index: 40;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -27,6 +29,37 @@
 }
 .navbar .navLinks .navlink {
   font-size: clamp(1.35rem, 1.8rem, 1.8vw);
+  /* Hover State */
+  /* Focus State*/
+  /* Active State
+  */
+}
+.navbar .navLinks .navlink a {
+  position: relative;
+  text-decoration: none;
+}
+.navbar .navLinks .navlink a:link {
+  color: white;
+}
+.navbar .navLinks .navlink a:visited {
+  color: white;
+}
+.navbar .navLinks .navlink a::after {
+  content: "";
+  position: absolute;
+  inset: 80% 0 0 0%;
+  height: 4px;
+  width: 0%;
+  margin-top: 10px;
+  transition: all 0.5s ease;
+  background: red;
+}
+.navbar .navLinks .navlink a:hover::after {
+  width: 100%;
+  transition: all 0.2s ease;
+}
+.navbar .navLinks .navlink a:focus::after {
+  width: 100%;
 }
 .navbar .launchApp {
   padding: 0 5%;
@@ -82,7 +115,7 @@
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(5px);
   overflow: hidden;
-  z-index: 20;
+  z-index: 41;
   transition: width 1s ease-in-out;
 }
 .mobileNav .closeNav {
@@ -112,9 +145,34 @@
   font-size: clamp(1.35rem, 1.8rem, 1.8vw);
   letter-spacing: 0.02rem;
   transition: all 0.4s ease;
+  /* Hover State */
+  /* Focus State*/
 }
 .mobileNav .main-nav ul li a {
   color: black;
+}
+.mobileNav .main-nav ul li a:link {
+  color: white;
+}
+.mobileNav .main-nav ul li a:visited {
+  color: purple;
+}
+.mobileNav .main-nav ul li a::after {
+  content: "";
+  position: absolute;
+  inset: 80% 0 0 0%;
+  height: 4px;
+  width: 0%;
+  margin-top: 10px;
+  transition: all 0.5s ease;
+  background: red;
+}
+.mobileNav .main-nav ul li a:hover::after {
+  width: 100%;
+  transition: all 0.2s ease;
+}
+.mobileNav .main-nav ul li a:focus::after {
+  width: 100%;
 }
 .mobileNav .main-nav ul li:hover {
   transform: translateY(-5px);

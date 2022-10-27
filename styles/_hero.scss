@@ -9,7 +9,7 @@
     justify-content: flex-start;
     flex-direction: column;
     align-items: center;
-    padding: 5vh 5vw;
+    padding: 10vh 5vw;
     background: rgba(255, 255, 255, 0.2);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);
@@ -70,5 +70,36 @@
         height: 100%;
       }
     }
+  }
+}
+.scroller {
+  height: 1.2em;
+  line-height: 1.2em;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.scroller > span {
+  position: absolute;
+  top: 0;
+  animation: slide 10s infinite;
+  font-weight: bold;
+  
+}
+.scroller:hover > span{
+  animation-play-state: paused;
+}
+@keyframes slide {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -1.2em;
+  }
+  50% {
+    top: -2.4em;
+  }
+  75% {
+    top: -3.6em;
   }
 }

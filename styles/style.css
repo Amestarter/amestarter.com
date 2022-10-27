@@ -117,6 +117,8 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: fixed;
+  z-index: 40;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -156,6 +158,39 @@ ul {
 }
 .navbar .navLinks .navlink {
   font-size: clamp(1.35rem, 1.8rem, 1.8vw);
+  /* Hover State */
+  /* Focus State*/
+  /* Active State
+  */
+}
+.navbar .navLinks .navlink a {
+  position: relative;
+  text-decoration: none;
+}
+.navbar .navLinks .navlink a:link {
+  color: white;
+}
+.navbar .navLinks .navlink a:visited {
+  color: white;
+}
+.navbar .navLinks .navlink a::after {
+  content: "";
+  position: absolute;
+  inset: 80% 0 0 0%;
+  height: 4px;
+  width: 0%;
+  margin-top: 10px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: red;
+}
+.navbar .navLinks .navlink a:hover::after {
+  width: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.navbar .navLinks .navlink a:focus::after {
+  width: 100%;
 }
 .navbar .launchApp {
   padding: 0 5%;
@@ -222,7 +257,7 @@ ul {
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
   overflow: hidden;
-  z-index: 20;
+  z-index: 41;
   -webkit-transition: width 1s ease-in-out;
   transition: width 1s ease-in-out;
 }
@@ -270,9 +305,36 @@ ul {
   letter-spacing: 0.02rem;
   -webkit-transition: all 0.4s ease;
   transition: all 0.4s ease;
+  /* Hover State */
+  /* Focus State*/
 }
 .mobileNav .main-nav ul li a {
   color: black;
+}
+.mobileNav .main-nav ul li a:link {
+  color: white;
+}
+.mobileNav .main-nav ul li a:visited {
+  color: purple;
+}
+.mobileNav .main-nav ul li a::after {
+  content: "";
+  position: absolute;
+  inset: 80% 0 0 0%;
+  height: 4px;
+  width: 0%;
+  margin-top: 10px;
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: red;
+}
+.mobileNav .main-nav ul li a:hover::after {
+  width: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}
+.mobileNav .main-nav ul li a:focus::after {
+  width: 100%;
 }
 .mobileNav .main-nav ul li:hover {
   -webkit-transform: translateY(-5px);
@@ -300,7 +362,7 @@ ul {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 5vh 5vw;
+  padding: 10vh 5vw;
   background: rgba(255, 255, 255, 0.2);
   -webkit-box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
           box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -373,6 +435,56 @@ ul {
   height: 100%;
 }
 
+.scroller {
+  height: 1.2em;
+  line-height: 1.2em;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.scroller > span {
+  position: absolute;
+  top: 0;
+  -webkit-animation: slide 10s infinite;
+          animation: slide 10s infinite;
+  font-weight: bold;
+}
+
+.scroller:hover > span {
+  -webkit-animation-play-state: paused;
+          animation-play-state: paused;
+}
+
+@-webkit-keyframes slide {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -1.2em;
+  }
+  50% {
+    top: -2.4em;
+  }
+  75% {
+    top: -3.6em;
+  }
+}
+
+@keyframes slide {
+  0% {
+    top: 0;
+  }
+  25% {
+    top: -1.2em;
+  }
+  50% {
+    top: -2.4em;
+  }
+  75% {
+    top: -3.6em;
+  }
+}
 .section {
   padding: 0 5vw;
 }
