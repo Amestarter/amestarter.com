@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Kalam&family=Lato:wght@300;400&family=Shalimar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam&family=Lato:wght@300;400&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;1,300;1,400&family=Shalimar&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@ body {
   overflow-x: hidden;
   position: relative;
   color: #fff;
-  font-family: Poppins;
+  font-family: "Nunito Sans", sans-serif;
 }
 ::-webkit-scrollbar {
   width: 5px;
@@ -17,6 +17,10 @@ body {
     #9b51e0 21.01%,
     rgba(48, 129, 237, 0.8) 100%
   );
+  background: #fff;
+}
+::-webkit-scrollbar-track {
+  background-color: #000;
 }
 html {
   scroll-behavior: smooth !important;
@@ -31,37 +35,38 @@ a {
   width: 100vw !important;
   transition: width 1s ease-in-out;
 }
-.grid-item{
+.grid-item {
   transform: translateY(200px) !important;
-  opacity:0 !important;
+  opacity: 0 !important;
   transition: all 1s ease;
   // border:1px solid red;
 }
-.itemwrapper{
+.itemwrapper {
   transform: translateY(200px) !important;
-  
-  opacity:0;
+
+  opacity: 0;
   transition: all 1s ease;
 }
-.wrapper{
+.wrapper {
   transform: translateY(200px) !important;
-  opacity:0 !important;
+  opacity: 0 !important;
   transition: all 1s ease;
 }
-.heroContent,.display{
-  animation:slideIn 2s 1 forwards
+.heroContent,
+.display {
+  animation: slideIn 2s 1 forwards;
 }
-@keyframes slideIn{
-  100%{
+@keyframes slideIn {
+  100% {
     transform: translateX(0%);
   }
 }
-.inView { 
-  opacity: 1 !important; 
-  -webkit-transform: translateY(0px) rotate(0deg) translateZ(0); 
+.inView {
+  opacity: 1 !important;
+  -webkit-transform: translateY(0px) rotate(0deg) translateZ(0);
   // transition: all 1s ease;
-  transform: translateY(0px) rotate(0deg) translateZ(0) !important; 
-} 
+  transform: translateY(0px) rotate(0deg) translateZ(0) !important;
+}
 
 ul {
   list-style: none;

@@ -22,23 +22,24 @@
       gap: 2rem;
     }
     .navlink {
-      font-size: clamp(1.35rem, 1.8rem, 1.8vw);
+      font-size: clamp(1.05rem, 1.5rem, 1.5vw);
     }
   }
   .launchApp {
     padding: 0 5%;
     display: none;
     span {
-      border: 1px solid #fff;
-      padding: 0.5rem;
+      // border: 1px solid #fff;
+      padding: 0.5rem 0.8rem;
       border-radius: 6px;
       cursor: pointer;
+      background-color: #4682b4;
       transition: all 0.3s ease;
       a {
         transition: all 0.5s ease;
       }
       &:hover {
-        border: 1px solid #252954;
+        // border: 1px solid #252954;
         a {
           color: aqua;
         }

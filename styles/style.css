@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Kalam&family=Lato:wght@300;400&family=Shalimar&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalam&family=Lato:wght@300;400&family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,700;1,300;1,400&family=Shalimar&display=swap");
 body {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@ body {
   overflow-x: hidden;
   position: relative;
   color: #fff;
-  font-family: Poppins;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -15,6 +15,11 @@ body {
 
 ::-webkit-scrollbar-thumb {
   background: linear-gradient(103.91deg, #9b51e0 21.01%, rgba(48, 129, 237, 0.8) 100%);
+  background: #fff;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000;
 }
 
 html {
@@ -34,50 +39,42 @@ a {
 }
 
 .grid-item {
-  -webkit-transform: translateY(200px) !important;
-          transform: translateY(200px) !important;
+  transform: translateY(200px) !important;
   opacity: 0 !important;
-  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
 .itemwrapper {
-  -webkit-transform: translateY(200px) !important;
-          transform: translateY(200px) !important;
+  transform: translateY(200px) !important;
   opacity: 0;
-  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
 .wrapper {
-  -webkit-transform: translateY(200px) !important;
-          transform: translateY(200px) !important;
+  transform: translateY(200px) !important;
   opacity: 0 !important;
-  -webkit-transition: all 1s ease;
   transition: all 1s ease;
 }
 
-.heroContent, .display {
+.heroContent,
+.display {
   -webkit-animation: slideIn 2s 1 forwards;
           animation: slideIn 2s 1 forwards;
 }
 
 @-webkit-keyframes slideIn {
   100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    transform: translateX(0%);
   }
 }
 
 @keyframes slideIn {
   100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+    transform: translateX(0%);
   }
 }
 .inView {
   opacity: 1 !important;
-  -webkit-transform: translateY(0px) rotate(0deg) translateZ(0);
   transform: translateY(0px) rotate(0deg) translateZ(0) !important;
 }
 
@@ -140,24 +137,21 @@ ul {
   }
 }
 .navbar .navLinks .navlink {
-  font-size: clamp(1.35rem, 1.8rem, 1.8vw);
+  font-size: clamp(1.05rem, 1.5rem, 1.5vw);
 }
 .navbar .launchApp {
   padding: 0 5%;
   display: none;
 }
 .navbar .launchApp span {
-  border: 1px solid #fff;
-  padding: 0.5rem;
+  padding: 0.5rem 0.8rem;
   border-radius: 6px;
   cursor: pointer;
+  background-color: #4682b4;
   transition: all 0.3s ease;
 }
 .navbar .launchApp span a {
   transition: all 0.5s ease;
-}
-.navbar .launchApp span:hover {
-  border: 1px solid #252954;
 }
 .navbar .launchApp span:hover a {
   color: aqua;
@@ -262,13 +256,12 @@ ul {
   }
 }
 .hero .container .heroContent {
-  -webkit-transform: translateX(-100%);
-          transform: translateX(-100%);
+  transform: translateX(-100%);
 }
 .hero .container .heroContent,
 .hero .container .display {
   flex: 1;
-  font-family: Poppins;
+  font-family: "Nunito Sans", sans-serif;
   color: #ffffff;
   text-align: left;
 }
@@ -286,10 +279,8 @@ ul {
   margin: 1.3rem;
   margin-left: 0;
   margin-right: 1rem;
-  padding: 0.5rem;
+  padding: 0.5rem 0.8rem;
   background-color: transparent;
-  border-radius: 5px;
-  border: 1px solid #ffffff;
   font-size: clamp(1rem, 1.5rem, 1.5vw);
   font-weight: 400;
   cursor: pointer;
@@ -299,14 +290,23 @@ ul {
 .hero .container .explorebtn:hover,
 .hero .container .createbtn:hover {
   background-color: #ffffff;
+  border-radius: 5px;
 }
 .hero .container .explorebtn:hover a,
 .hero .container .createbtn:hover a {
   color: #252954;
 }
+.hero .container .explorebtn {
+  border-radius: 5px;
+  border: 1px solid #ffffff;
+}
+.hero .container .createbtn {
+  border: none;
+  border-bottom: 1px solid #fff;
+  padding: 0.5rem 0;
+}
 .hero .container .display {
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  transform: translateX(100%);
 }
 .hero .container .display .displayImg {
   width: 100%;
@@ -358,10 +358,7 @@ ul {
   cursor: pointer;
   margin: auto;
   background: linear-gradient(45deg, rgba(28, 28, 32, 0.418), rgba(32, 31, 32, 0.418));
-  -webkit-transition-delay: 0.3s;
   transition-delay: 0.3s;
-  -webkit-transition: 0.4s;
-  -webkit-transition: 2s;
   transition: 2s;
   color: white;
   text-align: center;
@@ -390,6 +387,7 @@ a {
 .started h3 {
   font-size: clamp(1.5rem, 2vw, 2rem);
   font-weight: 600;
+  text-align: center;
 }
 .started h4 {
   font-size: clamp(1rem, 1.5vw, 1.5rem);
@@ -648,10 +646,21 @@ time {
     background-color: aqua;
   }
 }
-.headText {
-  padding: 0 5vw;
+.headContent {
+  background-image: url("../styles/faq.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: #000;
 }
-.headText .container {
+.headContent .containerSection {
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  padding: 2vh 5vw;
+}
+.headContent .containerSection .container {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -659,13 +668,13 @@ time {
   gap: 1rem;
   margin: 2rem 50px;
 }
-.headText .container .wrapper {
+.headContent .containerSection .container .wrapper {
   width: min(100%, 500px);
   padding: 7px 20px;
   border-radius: 5px;
   border: 0.5px solid #0c2a30;
 }
-.headText .container .wrapper .toggle {
+.headContent .containerSection .container .wrapper .toggle {
   font-size: clamp(1.1rem, 1.2vw, 1.32rem);
 }
 
@@ -675,12 +684,12 @@ time {
 
 .toggle,
 .content {
-  font-family: "Poppins", sans-serif;
   color: antiquewhite;
 }
 
 .toggle {
   width: 100%;
+  text-align: left;
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -703,8 +712,6 @@ time {
   color: #fff;
   overflow: hidden;
   transition: all 1s;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
 }
 .content .numberDim {
   opacity: 0.5;
@@ -802,7 +809,6 @@ footer .footer {
 }
 footer .footer .project {
   flex: 1.5;
-  width: 80%;
 }
 footer .footer .project h4 {
   font-weight: 600;
@@ -841,7 +847,6 @@ footer .footer aside .socials {
   width: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
 footer .footer aside .company h5,
